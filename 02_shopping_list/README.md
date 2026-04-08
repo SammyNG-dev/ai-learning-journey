@@ -27,4 +27,3 @@ Créer un programme en Python qui permet de gérer une liste de courses via un m
 - Validation d'une entrée utilisateur
 - Fonctions
 - Gestion d'erreurs logique
-- Structuration d'un programme
