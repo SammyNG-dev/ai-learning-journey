@@ -10,3 +10,4 @@ Bases sur l'utilisation de NumPy
 - Différence entre les modèles de calcul
 - Notion de vectorisation
 - Pourquoi NumPy est utilisé en IA
+

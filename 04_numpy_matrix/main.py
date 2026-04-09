@@ -1,0 +1,15 @@
+import numpy as np
+
+matrix_numpy = np.random.randint(1, 100, size=(3, 3))
+print("Matrice NumPy :")
+print(matrix_numpy)
+print()
+print("Moyenne :", np.mean(matrix_numpy))
+print()
+print("Moyenne par colonne :", np.mean(matrix_numpy, axis=0))
+print()
+print("Moyenne par ligne :", np.mean(matrix_numpy, axis=1))
+print()
+print("Somme par colonne : ", np.sum(matrix_numpy, axis=0))
+print()
+print("Somme par ligne :", np.sum(matrix_numpy, axis=1))
