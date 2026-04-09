@@ -22,9 +22,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 ## 👁️ Phase 3 — Représentation des données (pré-vision)
 
-- [ ] Projet 5 — Simuler un "écran" avec une matrice (grille 2D)  
-- [ ] Projet 6 — Détection de valeurs dans une matrice  
-- [ ] Projet 7 — Identifier des positions (coordonnées)  
+- [x] Projet 5 — Simuler un "écran" avec une matrice (grille 2D)  
+- [x] Projet 6 — Détection de valeurs dans une matrice  
+- [x] Projet 7 — Identifier des positions (coordonnées)  
 
 ---
 
@@ -129,6 +129,16 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ├── 04_numpy_matrix
 │   ├── main.py
 │   └── README.md
+├── 05_grid_screen_simulation
+│   ├── main.py
+│   └── README.md
+├── 06_grid_value_detection
+│   ├── main.py
+│   └── README.md
+├── 07_simple_decision_agent
+│   ├── main.py
+│   └── README.md
 └── README.md
+
 ```
 
