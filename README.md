@@ -30,7 +30,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 ## 🎮 Phase 4 — Logique de jeu (sans IA)
 
-- [ ] Projet 8 — Simulation de déplacement dans une grille  
+- [x] Projet 8 — Simulation de déplacement dans une grille  
 - [ ] Projet 9 — Gestion des collisions (obstacles)  
 - [ ] Projet 10 — Règles simples (si obstacle → action)  
 - [ ] Projet 11 — Boucle de jeu (état → décision → action)  
@@ -136,6 +136,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 │   ├── main.py
 │   └── README.md
 ├── 07_simple_decision_agent
+│   ├── main.py
+│   └── README.md
+├── 08_player_movement
 │   ├── main.py
 │   └── README.md
 └── README.md
