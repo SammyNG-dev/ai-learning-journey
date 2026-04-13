@@ -2,7 +2,7 @@
 
 ## 🎯 Objectif
 
-Gérer correctement les collisions et les limites de la grille pour empêcher des déplacements invalides du joueur.
+Gérer correctement les collisions, les limites de la grille et suivre précisément le trajet du joueur.
 
 ---
 
@@ -17,6 +17,7 @@ Ce programme :
   - si le joueur atteint le bord → arrêt
   - si un obstacle est rencontré → arrêt
 - met à jour la grille à chaque déplacement
+- enregistre le trajet du joueur
 
 ---
 
@@ -38,10 +39,11 @@ Ce programme :
 
 ### 2. Gestion des limites
 
-- vérification du bord droit de la grille :
 ```python
 if player_column == cols - 1:
 ```
+
+- empêche de sortir de la grille
 - évite les erreurs d’index
 
 ---
@@ -55,11 +57,13 @@ while True:
 
     if grid[player_row][player_column] == 0:
         grid[player_row][player_column] = 2
+        initial_position = (player_row, player_column)
         break
 ```
 
 - le joueur est placé uniquement sur une case vide
 - évite d’écraser un obstacle
+- enregistre la position initiale séparément
 
 ---
 
@@ -88,32 +92,58 @@ grid[player_row][player_column - 1] = 0
 
 ---
 
+### 6. Historique du trajet
+
+```python
+player_way.append((player_row, player_column))
+```
+
+- enregistre chaque déplacement du joueur
+- permet de reconstruire le trajet dans l’ordre
+
+---
+
+### 7. Séparation des données
+
+- `initial_position` → point de départ
+- `player_way` → déplacements uniquement
+
+- permet de distinguer :
+  - position initiale
+  - trajet
+
+---
+
 ## 📌 Exemple de sortie
 
 ```text
-[[1 1 0 1 1 1 1 1 0 0]
- [1 1 0 0 0 1 0 0 1 0]
- [1 0 1 1 1 1 0 1 0 0]
- [1 0 2 0 1 0 1 0 1 1]
- [1 0 0 1 1 0 1 1 1 1]
- [1 1 0 1 0 1 1 1 0 0]
- [0 1 1 1 1 0 0 1 1 0]
- [0 0 1 1 0 1 0 0 0 1]
- [0 0 1 1 1 1 1 1 1 0]
- [0 0 0 1 1 0 1 0 1 1]]
+[[1 1 0 0 1 1 0 1 1 0]
+ [1 0 0 0 1 1 1 0 1 0]
+ [0 0 0 1 1 1 1 0 0 0]
+ [0 1 0 0 0 1 1 1 1 1]
+ [0 1 1 0 1 0 0 0 1 1]
+ [1 0 0 0 1 0 0 1 2 0]
+ [0 1 0 1 0 0 0 1 1 0]
+ [1 1 1 0 1 1 1 0 1 1]
+ [1 0 0 1 0 0 1 1 1 1]
+ [0 0 0 0 1 0 1 1 0 1]]
 
-[[1 1 0 1 1 1 1 1 0 0]
- [1 1 0 0 0 1 0 0 1 0]
- [1 0 1 1 1 1 0 1 0 0]
- [1 0 0 2 1 0 1 0 1 1]
- [1 0 0 1 1 0 1 1 1 1]
- [1 1 0 1 0 1 1 1 0 0]
- [0 1 1 1 1 0 0 1 1 0]
- [0 0 1 1 0 1 0 0 0 1]
- [0 0 1 1 1 1 1 1 1 0]
- [0 0 0 1 1 0 1 0 1 1]]
+[[1 1 0 0 1 1 0 1 1 0]
+ [1 0 0 0 1 1 1 0 1 0]
+ [0 0 0 1 1 1 1 0 0 0]
+ [0 1 0 0 0 1 1 1 1 1]
+ [0 1 1 0 1 0 0 0 1 1]
+ [1 0 0 0 1 0 0 1 0 2]
+ [0 1 0 1 0 0 0 1 1 0]
+ [1 1 1 0 1 1 1 0 1 1]
+ [1 0 0 1 0 0 1 1 1 1]
+ [0 0 0 0 1 0 1 1 0 1]]
 
-OBSTACLE
+BORD
+
+Trajet :
+Position initiale : (5, 8)
+Mouvements : [(5, 9)]
 ```
 
 ---
@@ -121,9 +151,10 @@ OBSTACLE
 ## 📚 Ce que j'ai retenu
 
 - un agent doit vérifier son environnement avant d’agir
-- il faut gérer les limites d’un système pour éviter les erreurs
+- il faut gérer les limites pour éviter les erreurs
 - un déplacement valide dépend de plusieurs conditions
-- la cohérence entre logique et affichage est essentielle
-- c’est une étape clé vers une simulation fiable
+- la grille représente l’état actuel du système
+- séparer l’état courant (grille) de l’historique (trajet) rend le système plus clair
+- une bonne structure de données simplifie la logique du programme
 
 ---
