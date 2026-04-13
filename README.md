@@ -32,7 +32,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 - [x] Projet 8 — Simulation de déplacement dans une grille  
 - [x] Projet 9 — Gestion des collisions (obstacles)  
-- [ ] Projet 10 — Règles simples (si obstacle → action)  
+- [x] Projet 10 — Règles simples (si obstacle → action)  
 - [ ] Projet 11 — Boucle de jeu (état → décision → action)  
 
 ---
@@ -141,7 +141,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ├── 08_player_movement
 │   ├── main.py
 │   └── README.md
-├── 09_collision_handling
+├── 10_multi_direction_movement
 │   ├── main.py
 │   └── README.md
 └── README.md
