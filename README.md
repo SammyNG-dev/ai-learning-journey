@@ -40,7 +40,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ## 🧠 Phase 5 — Mathématiques utiles
 
 - [x] Projet 12 — Vecteurs et opérations  
-- [ ] Projet 13 — Matrices et multiplication  
+- [x] Projet 13 — Matrices et multiplication  
 - [ ] Projet 14 — Comprendre une fonction de coût simple  
 
 ---
@@ -148,6 +148,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 │   ├── main.py
 │   └── README.md
 ├── 12_vectors_and_operations
+│   ├── main.py
+│   └── README.md
+├── 13_matrix_multiplication
 │   ├── main.py
 │   └── README.md
 └── README.md
