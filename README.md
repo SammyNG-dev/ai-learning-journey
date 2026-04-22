@@ -159,6 +159,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ├── 15_linear_regression
 │   ├── main.py
 │   └── README.md
+├── 16_classification
+│   ├── main.py
+│   └── README.md
 └── README.md
 
 ```
