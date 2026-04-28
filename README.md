@@ -50,7 +50,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 - [x] Projet 15 — Régression simple  
 - [x] Projet 16 — Classification simple  
 - [x] Projet 17 — Entraînement + test  
-- [ ] Projet 18 — Ajustement des paramètres  
+- [x] Projet 18 — Ajustement des paramètres  
 
 ---
 
@@ -165,6 +165,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ├── 17_training_and_testing
 │   ├── main.py
 │   └── README.md
+├── 18_parameters_adjustment
+│   ├── main.py
+│   └── README 18.md
 └── README.md
 ```
 
