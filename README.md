@@ -47,9 +47,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 ## 📊 Phase 6 — Machine Learning
 
-- [ ] Projet 15 — Régression simple  
-- [ ] Projet 16 — Classification simple  
-- [ ] Projet 17 — Entraînement + test  
+- [x] Projet 15 — Régression simple  
+- [x] Projet 16 — Classification simple  
+- [x] Projet 17 — Entraînement + test  
 - [ ] Projet 18 — Ajustement des paramètres  
 
 ---
@@ -161,8 +161,10 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 │   └── README.md
 ├── 16_classification
 │   ├── main.py
+│   └── README.md5
+├── 17_training_and_testing
+│   ├── main.py
 │   └── README.md
 └── README.md
-
 ```
 
