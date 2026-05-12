@@ -127,6 +127,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 # Structure du repo
 
 ```
+sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 .
 ├── 01_python_guess_number
 │   ├── main.py
@@ -152,6 +153,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ├── 08_player_movement
 │   ├── main.py
 │   └── README.md
+├── 09_collision_handling
+│   ├── main.py
+│   └── README.md
 ├── 10_multi_direction_movement
 │   ├── main.py
 │   └── README.md
@@ -172,13 +176,23 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 │   └── README.md
 ├── 16_classification
 │   ├── main.py
-│   └── README.md5
+│   └── README.md
 ├── 17_training_and_testing
 │   ├── main.py
 │   └── README.md
 ├── 18_parameters_adjustment
 │   ├── main.py
-│   └── README 18.md
+│   └── README.md
+├── 19_first_multiparameters_neuron
+│   ├── main.py
+│   └── README.md
+├── 20_neurons_network
+│   ├── 20.1_forward_hidden_neuron
+│   │   ├── main.py
+│   │   └── README.md
+│   └── 20.2_build_hidden_dataset
+│       ├── main.py
+│       └── README.md
 └── README.md
 ```
 
