@@ -64,7 +64,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.4 — Première propagation d’erreur naïve
   - [x] Projet 20.5 — Pourquoi cette propagation est incomplète
   - [x] Projet 20.6 — Intuition de la pente de la sigmoid
-  - [ ] Projet 20.7 — Dérivée de la sigmoid
+  - [x] Projet 20.7 — Dérivée de la sigmoid
   - [ ] Projet 20.8 — Delta et erreur locale
   - [ ] Projet 20.9 — Rétropropagation propre
   - [ ] Projet 20.10 — Refactorisation POO du réseau
