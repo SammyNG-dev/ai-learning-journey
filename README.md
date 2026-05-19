@@ -58,18 +58,17 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 - [x] Projet 19 — Premier neurone
 - [ ] Projet 20 — Réseau de neurones dense
-  - [ ] Projet 20.1 — Forward d’un neurone caché
-  - [ ] Projet 20.2 — Deux neurones cachés
-  - [ ] Projet 20.3 — Construction du `final_dataset`
-  - [ ] Projet 20.4 — Neurone final
-  - [ ] Projet 20.5 — Première propagation d’erreur naïve
-  - [ ] Projet 20.6 — Pourquoi cette propagation est incomplète
-  - [ ] Projet 20.7 — Intuition de la pente de la sigmoid
-  - [ ] Projet 20.8 — Dérivée de la sigmoid
-  - [ ] Projet 20.9 — Delta et erreur locale
-  - [ ] Projet 20.10 — Rétropropagation propre
-  - [ ] Projet 20.11 — Refactorisation POO du réseau
-  - [ ] Projet 20.12 — Stabilisation et validation sur XOR
+  - [x] Projet 20.1 — Forward d’un neurone caché
+  - [x] Projet 20.2 — Construction du `final_dataset`
+  - [x] Projet 20.3 — Neurone final
+  - [x] Projet 20.4 — Première propagation d’erreur naïve
+  - [ ] Projet 20.5 — Pourquoi cette propagation est incomplète
+  - [ ] Projet 20.6 — Intuition de la pente de la sigmoid
+  - [ ] Projet 20.7 — Dérivée de la sigmoid
+  - [ ] Projet 20.8 — Delta et erreur locale
+  - [ ] Projet 20.9 — Rétropropagation propre
+  - [ ] Projet 20.10 — Refactorisation POO du réseau
+  - [ ] Projet 20.11 — Stabilisation et validation sur XOR
 - [ ] Projet 21 — Classification d’images simples
 ---
 
