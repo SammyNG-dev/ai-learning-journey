@@ -62,8 +62,8 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.2 — Construction du `final_dataset`
   - [x] Projet 20.3 — Neurone final
   - [x] Projet 20.4 — Première propagation d’erreur naïve
-  - [ ] Projet 20.5 — Pourquoi cette propagation est incomplète
-  - [ ] Projet 20.6 — Intuition de la pente de la sigmoid
+  - [x] Projet 20.5 — Pourquoi cette propagation est incomplète
+  - [x] Projet 20.6 — Intuition de la pente de la sigmoid
   - [ ] Projet 20.7 — Dérivée de la sigmoid
   - [ ] Projet 20.8 — Delta et erreur locale
   - [ ] Projet 20.9 — Rétropropagation propre
