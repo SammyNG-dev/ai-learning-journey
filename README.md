@@ -65,7 +65,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.5 — Pourquoi cette propagation est incomplète
   - [x] Projet 20.6 — Intuition de la pente de la sigmoid
   - [x] Projet 20.7 — Dérivée de la sigmoid
-  - [ ] Projet 20.8 — Delta et erreur locale
+  - [x] Projet 20.8 — Delta et erreur locale
   - [ ] Projet 20.9 — Rétropropagation propre
   - [ ] Projet 20.10 — Refactorisation POO du réseau
   - [ ] Projet 20.11 — Stabilisation et validation sur XOR
@@ -185,11 +185,28 @@ sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 ├── 19_first_multiparameters_neuron
 │   ├── main.py
 │   └── README.md
-├── 20_neurons_network
+── 20_neurons_network
 │   ├── 20.1_forward_hidden_neuron
 │   │   ├── main.py
 │   │   └── README.md
-│   └── 20.2_build_hidden_dataset
+│   ├── 20.2_build_hidden_dataset
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.3_final_neuron
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.4_naive_error_propagation
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.5_why_naive_error_propagation_fails
+│   │   └── README.md
+│   ├── 20.6_sigmoid_slope_intuition
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.7_sigmoid_derivative
+│   │   ├── main.py
+│   │   └── README.md
+│   └── 20.8_delta_and_local_error
 │       ├── main.py
 │       └── README.md
 └── README.md
