@@ -19,5 +19,3 @@ for pred in y_pred:
     print("derivative:", derivative)
     print("delta :", delta)
     print()
-
-print(np.exp(1))
