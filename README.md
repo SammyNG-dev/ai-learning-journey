@@ -67,9 +67,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.7 — Dérivée de la sigmoid
   - [x] Projet 20.8 — Delta et erreur locale
   - [x] Projet 20.9 — Gradient d’un poids
-  - [ ] Projet 20.10 — Rétropropagation propre
-  - [ ] Projet 20.11 — Refactorisation POO du réseau
-  - [ ] Projet 20.12 — Stabilisation et validation sur XOR
+  - [x] Projet 20.10 — Rétropropagation propre
+  - [x] Projet 20.11 — Stabilisation et validation sur XOR
+  - [ ] Projet 20.12 — Refactorisation POO du réseau
 - [ ] Projet 21 — Classification d’images simples
 ---
 
@@ -186,28 +186,37 @@ sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 ├── 19_first_multiparameters_neuron
 │   ├── main.py
 │   └── README.md
-── 20_neurons_network
-│   ├── 20.1_forward_hidden_neuron
+├── 20_neurons_network
+│   ├── 20.01_forward_hidden_neuron
 │   │   ├── main.py
 │   │   └── README.md
-│   ├── 20.2_build_hidden_dataset
+│   ├── 20.02_build_hidden_dataset
 │   │   ├── main.py
 │   │   └── README.md
-│   ├── 20.3_final_neuron
+│   ├── 20.03_final_neuron
 │   │   ├── main.py
 │   │   └── README.md
-│   ├── 20.4_naive_error_propagation
+│   ├── 20.04_naive_error_propagation
 │   │   ├── main.py
 │   │   └── README.md
-│   ├── 20.5_why_naive_error_propagation_fails
+│   ├── 20.05_why_naive_error_propagation_fails
 │   │   └── README.md
-│   ├── 20.6_sigmoid_slope_intuition
+│   ├── 20.06_sigmoid_slope_intuition
 │   │   ├── main.py
 │   │   └── README.md
-│   ├── 20.7_sigmoid_derivative
+│   ├── 20.07_sigmoid_derivative
 │   │   ├── main.py
 │   │   └── README.md
-│   └── 20.8_delta_and_local_error
+│   ├── 20.08_delta_and_local_error
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.09_weight_gradient
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 20.10_clean_backpropagation
+│   │   ├── main.py
+│   │   └── README.md
+│   └── 20.11_XOR_stabilisation
 │       ├── main.py
 │       └── README.md
 └── README.md
