@@ -34,9 +34,13 @@ output_neuron2 = neuron(x, w2, b2)
 final_dataset = np.array([output_neuron1, output_neuron2]).T
 final_output = neuron(final_dataset, w_final, b_final)
 error = final_output - y_true
+final_delta = error * sigmoid_derivative(final_output)
+
 cost = np.mean(error ** 2)
-dw_final = np.dot(final_dataset.T, error) / len(final_dataset)
-db_final = np.mean(error)
+
+dw_final = np.dot(final_dataset.T, final_delta) / len(final_dataset)
+db_final = np.mean(final_delta)
+
 w_final = w_final - lr * dw_final
 b_final = b_final - lr * db_final
 output_final_neuron = neuron(final_dataset, w_final, b_final)
