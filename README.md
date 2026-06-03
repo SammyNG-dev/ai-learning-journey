@@ -69,7 +69,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.9 — Gradient d’un poids
   - [x] Projet 20.10 — Rétropropagation propre
   - [x] Projet 20.11 — Stabilisation et validation sur XOR
-  - [ ] Projet 20.12 — Refactorisation POO du réseau
+  - [ ] Projet 20.12 — Refactorisation POO du réseau (plus tard)
 - [ ] Projet 21 — Classification d’images simples
 ---
 
