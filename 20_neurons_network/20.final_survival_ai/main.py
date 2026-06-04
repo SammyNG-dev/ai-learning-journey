@@ -32,6 +32,50 @@ y_train = np.array([
     0
 ])
 
+x_test = np.array([
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1, 1],
+    [0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 1],
+    [0, 0, 0, 1, 1, 0],
+    [0, 0, 0, 1, 1, 1],
+
+    [0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 0, 1, 0],
+    [0, 0, 1, 0, 1, 1],
+    [0, 0, 1, 1, 0, 0],
+    [0, 0, 1, 1, 0, 1],
+
+    [0, 1, 0, 0, 0, 1],
+    [0, 1, 0, 0, 1, 0],
+    [0, 1, 0, 0, 1, 1],
+    [0, 1, 0, 1, 0, 0],
+    [0, 1, 0, 1, 0, 1],
+    [0, 1, 0, 1, 1, 0],
+    [0, 1, 0, 1, 1, 1],
+
+    [0, 1, 1, 0, 0, 0],
+    [0, 1, 1, 0, 0, 1],
+    [0, 1, 1, 0, 1, 0],
+    [0, 1, 1, 0, 1, 1],
+
+    [1, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0],
+    [1, 0, 0, 1, 1, 0],
+
+    [1, 1, 0, 0, 0, 0],
+    [1, 1, 0, 0, 0, 1],
+    [1, 1, 0, 0, 1, 0],
+    [1, 1, 0, 0, 1, 1],
+
+    [1, 1, 1, 0, 0, 1],
+    [1, 1, 1, 0, 1, 0],
+    [1, 1, 1, 0, 1, 1]
+])
+
 lr = 1
 
 weights1 = np.random.rand(6, 4) - 0.5
@@ -98,3 +142,11 @@ for i in range(1000):
     weights_final = weights_final - lr * dw_final
     bias_final = bias_final - lr * db_final
 
+# test de l'IA
+
+test_output1 = neuron(x_test, weights1, bias1)
+test_output2 = neuron(test_output1, weights2, bias2)
+test_final_output = neuron(test_output2, weights_final, bias_final)
+test_predictions = (test_final_output > 0.5).astype(int)
+for x, proba, pred in zip(x_test, test_final_output, test_predictions):
+        print(x, "->", round(float(proba.item()), 3), "->", int(pred.item()))

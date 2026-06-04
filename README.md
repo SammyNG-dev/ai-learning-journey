@@ -216,7 +216,10 @@ sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 │   ├── 20.10_clean_backpropagation
 │   │   ├── main.py
 │   │   └── README.md
-│   └── 20.11_XOR_stabilisation
+│   ├── 20.11_XOR_stabilisation
+│   │   ├── main.py
+│   │   └── README.md
+│   └── 20.final_survival_ai
 │       ├── main.py
 │       └── README.md
 └── README.md
