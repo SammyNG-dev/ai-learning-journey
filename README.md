@@ -57,7 +57,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ## 🤖 Phase 7 — Réseaux de neurones
 
 - [x] Projet 19 — Premier neurone
-- [ ] Projet 20 — Réseau de neurones dense
+- [x] Projet 20 — Réseau de neurones dense
   - [x] Projet 20.1 — Forward d’un neurone caché
   - [x] Projet 20.2 — Construction du `final_dataset`
   - [x] Projet 20.3 — Neurone final
@@ -70,12 +70,12 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
   - [x] Projet 20.10 — Rétropropagation propre
   - [x] Projet 20.11 — Stabilisation et validation sur XOR
   - [ ] Projet 20.12 — Refactorisation POO du réseau (plus tard)
-- [ ] Projet 21 — Classification d’images simples
+- [x] Projet 21 — Classification d’images simples
 ---
 
 ## 🎯 Phase 8 — Reinforcement Learning
 
-- [ ] Projet 22 — Environnement simple  
+- [x] Projet 22 — Environnement simple  
 - [ ] Projet 23 — Agent avec récompense  
 - [ ] Projet 24 — Q-learning  
 - [ ] Projet 25 — Deep Q Network (DQN)  
