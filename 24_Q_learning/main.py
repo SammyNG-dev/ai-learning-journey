@@ -1,29 +1,3 @@
-"""q_table = {
-    (2, "avancer"): 8
-}
-
-position = 1
-action = "avancer"
-reward = 0
-next_position = 2
-
-learning_rate = 0.1
-gamma = 0.9
-
-q_avancer_next = q_table.get((next_position, "avancer"), 0)
-q_reculer_next = q_table.get((next_position, "reculer"), 0)
-
-next_q_value = max(q_avancer_next, q_reculer_next)
-
-q_value = q_table.get((position, action), 0)
-
-q_value = q_value + learning_rate * (reward + gamma * next_q_value - q_value)
-
-q_table[(position, action)] = q_value
-
-print(q_table)
-"""
-
 import numpy as np
 import random
 
@@ -33,6 +7,7 @@ actions = ["avancer", "reculer"]
 compteur = 0
 gamma = 0.8
 learning_rate = 0.1
+epsilon = 0.3
 
 # fonction de calcul de la q_value à mettre à jour
 
@@ -48,8 +23,8 @@ for episode in range(1000):
     while True:
         old_position = current_position
         random_mode_choice = np.random.random()
-        if random_mode_choice < 1:
-        # l'agent va explorer 100% du temps
+        if random_mode_choice < epsilon:
+        # l'agent va explorer 30% du temps
             action = random.choice(actions)
             if action == "avancer" and current_position < len(world) - 1:
                 current_position += 1
@@ -59,8 +34,22 @@ for episode in range(1000):
                 current_position -= 1
                 world[current_position] = 1
                 world[current_position + 1] = 0
+        else:
+            q_avancer = q_table.get((current_position, "avancer"), 0)
+            q_reculer = q_table.get((current_position, "reculer"), 0)
+            q_max = max(q_avancer, q_reculer)
+            if q_avancer == q_max and current_position < len(world) - 1:
+                action = "avancer"
+                current_position += 1
+                world[current_position] = 1
+                world[current_position - 1] = 0
+            elif q_reculer == q_max and current_position > 0:
+                action = "reculer"
+                current_position -= 1
+                world[current_position] = 1
+                world[current_position + 1] = 0
         compteur += 1
-
+        
         if current_position == goal_position:
             reward = 10
         elif old_position < current_position:
@@ -80,6 +69,7 @@ for episode in range(1000):
         if current_position == goal_position:
             break
 
-for key, value in q_table.items():
+print("Q_table:")
+for key, value in sorted(q_table.items()):
     print(key, ":", value)
 print("Nombre de tours:", compteur)
