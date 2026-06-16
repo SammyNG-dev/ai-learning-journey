@@ -76,9 +76,9 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 ## 🎯 Phase 8 — Reinforcement Learning
 
 - [x] Projet 22 — Environnement simple  
-- [ ] Projet 23 — Agent avec récompense  
-- [ ] Projet 24 — Q-learning  
-- [ ] Projet 25 — Deep Q Network (DQN)  
+- [x] Projet 23 — Agent avec récompense  
+- [x] Projet 24 — Q-learning  
+- [x] Projet 25 — Deep Q Network (DQN)  
 
 ---
 
@@ -222,6 +222,26 @@ sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 │   └── 20.final_survival_ai
 │       ├── main.py
 │       └── README.md
+├── 21_simple_images_classification
+│   ├── main.py
+│   └── README.md
+├── 22_simple_environment
+│   ├── main.py
+│   └── README.md
+├── 23_agent_with_reward
+│   ├── main.py
+│   └── README.md
+├── 24_Q_learning
+│   ├── main.py
+│   └── README.md
+├── 25_dqn_network
+│   ├── 25.01_q_table_to_neuron
+│   │   ├── main.py
+│   │   └── README.md
+│   ├── 25.02_one_output_per_action
+│   │   ├── main.py
+│   │   └── README.md
+│   └── README.md
 └── README.md
 ```
 
