@@ -1,5 +1,5 @@
-25.1 : Remplacer une Q-table par un neurone
-25.2 : Une sortie par action
-25.3 : Entraîner le réseau à partir de données RL
-25.4 : Remplacer complètement la Q-table
-25.5 : Premier vrai DQN simplifié
+# Sous-projet du P25
+
+25.01 : Réseau de neurones pour approximer une Q-table
+25.02 : Entraînement du réseau par Q-Learning
+25.03 : Premier DQN simplifié
