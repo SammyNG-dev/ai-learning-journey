@@ -78,7 +78,10 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 - [x] Projet 22 — Environnement simple  
 - [x] Projet 23 — Agent avec récompense  
 - [x] Projet 24 — Q-learning  
-- [x] Projet 25 — Deep Q Network (DQN)  
+- [x] Projet 25 — Deep Q Network (DQN)
+  - [x] 25.01 : Réseau de neurones pour approximer une Q-table
+  - [x] 25.02 : Entraînement du réseau par Q-Learning
+  - [x] 25.03 : Premier DQN simplifié
 
 ---
 
@@ -241,6 +244,10 @@ sammy@sammy-Nitro-AN515-58:~/Bureau/Dev/ai-learning-journey$ tree
 │   ├── 25.02_one_output_per_action
 │   │   ├── main.py
 │   │   └── README.md
+│   ├── 25.03_mini_deep_q_network
+│   │   ├── play.py
+│   │   ├── README.md
+│   │   └── train.py
 │   └── README.md
 └── README.md
 ```
