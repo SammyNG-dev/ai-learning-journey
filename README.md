@@ -87,34 +87,36 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 ## 🕹️ Phase 9 — Jeux simples
 
-- [ ] Projet 26 — Agent dans une grille  
-- [ ] Projet 27 — Jeu avec inertie simple  
-- [ ] Projet 28 — Objectif à atteindre  
-- [ ] Projet 29 — Terminer un niveau simple  
+- [x] Projet 26 — Agent dans une grille
+- [ ] Projet 27 — Agent avec position de l’objectif en entrée
+- [ ] Projet 28 — Objectif mobile simple
+- [ ] Projet 29 — Jeu avec inertie simple
+- [ ] Projet 30 — Obstacle et navigation
+- [ ] Projet 31 — Terminer un niveau simple
 
 ---
 
 ## 🧩 Phase 10 — Interaction avec un jeu réel
 
-- [ ] Projet 30 — Capturer l’écran  
-- [ ] Projet 31 — Envoyer des inputs clavier  
-- [ ] Projet 32 — Lire l’état du jeu  
+- [ ] Projet 32 — Capturer l’écran  
+- [ ] Projet 33 — Envoyer des inputs clavier  
+- [ ] Projet 34 — Lire l’état du jeu  
 
 ---
 
 ## 🌀 Phase 11 — Sonic (progression)
 
-- [ ] Projet 33 — Agent basique (bouger Sonic)  
-- [ ] Projet 34 — Éviter les obstacles  
-- [ ] Projet 35 — Survivre  
-- [ ] Projet 36 — Finir un niveau  
-- [ ] Projet 37 — Enchaîner plusieurs niveaux  
+- [ ] Projet 35 — Agent basique (bouger Sonic)  
+- [ ] Projet 36 — Éviter les obstacles  
+- [ ] Projet 37 — Survivre  
+- [ ] Projet 38 — Finir un niveau  
+- [ ] Projet 39 — Enchaîner plusieurs niveaux  
 
 ---
 
 ## 🏁 Phase 12 — Objectif final
 
-- [ ] Projet 38 — IA autonome sur Sonic 2  
+- [ ] Projet 40 — IA autonome sur Sonic 2  
 
 ---
 
