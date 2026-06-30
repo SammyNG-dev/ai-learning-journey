@@ -64,7 +64,7 @@ bias = np.array([
 
 total_moves = 0
 goal_positions = ((4, 6), (2, 8))
-file = open("/home/sammy/Bureau/sortie_agent_play.txt", "w")
+file = open("sortie_agent_play.txt", "w")
 
 for goal_position in goal_positions:
     file.write(f"Goal position : {goal_position}\n\n")
