@@ -55,6 +55,8 @@ def get_reward(old_agent_position, agent_pos, goal_pos):
         reward = 1
     elif not is_nearer(old_agent_position, agent_pos, goal_pos):
         reward = 0
+    elif not is_next_position_valid(agent_pos, goal_pos):
+        reward = -1
     return reward
 
 def is_nearer(old_pos, new_pos, goal_pos):
