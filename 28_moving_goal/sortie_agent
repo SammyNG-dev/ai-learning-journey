@@ -1,0 +1,25 @@
+
+10 entraînements, 13 positions de test : 
+
+Succès : 127 (97.69%)
+Echecs : 3 (2.31%)Succès
+Pour la position (0, 1) : 10 Succès (100.0%)
+Pour la position (1, 0) : 10 Succès (100.0%)
+Pour la position (1, 1) : 10 Succès (100.0%)
+Pour la position (2, 8) : 10 Succès (100.0%)
+Pour la position (4, 6) : 10 Succès (100.0%)
+Pour la position (5, 2) : 10 Succès (100.0%)
+Pour la position (6, 6) : 10 Succès (100.0%)
+Pour la position (8, 0) : 10 Succès (100.0%)
+Pour la position (8, 5) : 10 Succès (100.0%)
+Pour la position (8, 9) : 9 Succès (90.0%)
+Pour la position (9, 0) : 10 Succès (100.0%)
+Pour la position (9, 4) : 10 Succès (100.0%)
+Pour la position (9, 9) : 8 Succès (80.0%)
+
+Echecs
+
+Pour la position (8, 9) : 1 Echecs (10.0%)
+Pour la position (9, 9) : 2 Echecs (20.0%)
+
+Temps d'exécution : 2h 43min 41s
