@@ -3,6 +3,7 @@ import random
 from datetime import datetime
 import os
 
+run_start = datetime.now()
 
 start = datetime.now()
 
@@ -119,6 +120,13 @@ def sigmoid(z):
 def sigmoid_derivative(s):
     return s * (1 - s)
 
+def calculate_time(secs):
+    hours = secs // 3600
+    minutes = (secs % 3600) // 60
+    seconds = secs % 60
+    return f"{hours}h {minutes}mn {seconds}s"
+
+
 agent_row_start = 0
 agent_col_start = 0
 
@@ -131,7 +139,7 @@ learning_rate = 0.0007
 
 successes = 0
 fails = 0
-episodes = 100000
+episodes = 200000
 max_moves = 200
 neurons_hidden = 8
 
@@ -141,7 +149,6 @@ successes_by_goal_position = {}
 fails_by_goal_position = {}
 
 total_moves = 0
-run_start = datetime.now()
 epsilon = 1
 np.random.seed(42)
 random.seed(42)
@@ -157,9 +164,11 @@ print(f"train.py | entrainement à {neurons_hidden} neurones - {episodes} épiso
 if os.path.exists(f"./29_/parameters_{neurons_hidden}_neurons_{episodes}_episodes.npz"):
     print("Chargement des paramètres...")
     file.write("Chargement des paramètres...\n\n")
-    data = np.load(f"./29_/parameters_{episodes}_episodes.npz")
+    data = np.load(f"./29_/parameters_{neurons_hidden}_neurones_{episodes}_episodes.npz")
     weights_hidden = data["weights_hidden"]
     bias_hidden = data["bias_hidden"]
+    weights_hidden2 = data["weights_hidden2"]
+    bias_hidden2 = data["bias_hidden2"]
     weights_final = data["weights_final"]
     bias_final = data["bias_final"]
 else:
@@ -167,13 +176,19 @@ else:
     file.write("Inititialisation aléatoire des paramètres...\n\n")
     weights_hidden = np.random.rand(8, neurons_hidden) - 0.5
     bias_hidden = np.random.rand(1, neurons_hidden) - 0.5
-    weights_final = np.random.rand(2, 4) - 0.5
+
+    weights_hidden2 = np.random.rand(neurons_hidden, 4) - 0.5
+    bias_hidden2 = np.random.rand(1, 4)
+
+    weights_final = np.random.rand(4, 4) - 0.5
     bias_final = np.random.rand(1, 4) - 0.5
 
 rewards_distribution = {}
 
 world = create_world(start_position, start_position)
 free_positions = get_free_positions(world)
+successes_for_batch_episodes = 0
+fails_for_batch_episodes = 0
 
 for episode in range(episodes):
     current_position = start_position
@@ -192,7 +207,9 @@ for episode in range(episodes):
         else:
             z_hidden = np.dot(old_input_network, weights_hidden) + bias_hidden
             output_hidden = sigmoid(z_hidden)
-            q_values = np.dot(output_hidden, weights_final) + bias_final
+            z_hidden2 = np.dot(output_hidden, weights_hidden2) + bias_hidden2
+            output_hidden2 = sigmoid(z_hidden2)
+            q_values = np.dot(output_hidden2, weights_final) + bias_final
             index_action = np.argmax(q_values)
             action = moves[index_action]
         
@@ -205,12 +222,16 @@ for episode in range(episodes):
         rewards_distribution[reward] = rewards + 1
         total_moves += 1
 
-        z_hidden = np.dot(input_network, weights_hidden) + bias_hidden
-        next_output_hidden = sigmoid(z_hidden)
-        next_q_values = np.dot(next_output_hidden, weights_final) + bias_final
+        current_z_hidden = np.dot(input_network, weights_hidden) + bias_hidden
+        current_output_hidden = sigmoid(current_z_hidden)
+        current_z_hidden2 = np.dot(current_output_hidden, weights_hidden2) + bias_hidden2
+        current_output_hidden2 = sigmoid(current_z_hidden2)
+        next_q_values = np.dot(current_output_hidden2, weights_final) + bias_final
         old_z_hidden = np.dot(old_input_network, weights_hidden) + bias_hidden
         old_output_hidden = sigmoid(old_z_hidden)
-        old_q_values = np.dot(old_output_hidden, weights_final) + bias_final
+        old_z_hidden2 = np.dot(old_output_hidden, weights_hidden2) + bias_hidden2
+        old_output_hidden2 = sigmoid(old_z_hidden2)
+        old_q_values = np.dot(old_output_hidden2, weights_final) + bias_final
         next_q_value = np.max(next_q_values)
         target_vector = old_q_values.copy()
         target = reward
@@ -223,16 +244,21 @@ for episode in range(episodes):
         action_index = moves.index(action)
         target_vector[0][action_index] = target
         error = old_q_values - target_vector
-        delta_hidden = np.dot(error, weights_final.T) * sigmoid_derivative(old_output_hidden)
+        delta_hidden2 = np.dot(error, weights_final.T) * sigmoid_derivative(old_output_hidden2)
+        delta_hidden = np.dot(delta_hidden2, weights_hidden2.T) * sigmoid_derivative(old_output_hidden)
         cost = np.mean(error ** 2)
         episode_cost += cost
         nb_update += 1
         dw_hidden = 2 * np.dot(old_input_network.T, delta_hidden)  / len(old_input_network)
         db_hidden = 2 * np.mean(delta_hidden, axis=0, keepdims=True)
-        dw_final = 2 * np.dot(old_output_hidden.T, error) / len(old_output_hidden)
+        dw_hidden2 = 2 * np.dot(old_output_hidden.T, delta_hidden2) / len(old_output_hidden)
+        db_hidden2 = 2 * np.mean(delta_hidden2, axis=0, keepdims=True)
+        dw_final = 2 * np.dot(old_output_hidden2.T, error) / len(old_output_hidden2)
         db_final = 2 * np.mean(error, axis=0, keepdims=True)
         weights_hidden = weights_hidden - learning_rate * dw_hidden
         bias_hidden = bias_hidden - learning_rate * db_hidden
+        weights_hidden2 = weights_hidden2 - learning_rate * dw_hidden2
+        bias_hidden2 = bias_hidden2 - learning_rate * db_hidden2
         weights_final = weights_final - learning_rate * dw_final
         bias_final = bias_final - learning_rate * db_final
         percent = (episode + 1) / episodes * 100
@@ -241,19 +267,29 @@ for episode in range(episodes):
 
     if current_position == goal_position:
         successes += 1
+        successes_for_batch_episodes
     else:
         fails += 1
+        fails_for_batch_episodes
 
     if episode % (episodes / 100) == 0 and episode > 1:
         successes_percent = round(successes / episode * 100, 2)
         fails_percent = round(fails / episode * 100, 2)
+        successes_percent_batch = round(successes_for_batch_episodes / (episode / 100) * 100, 2)
+        fails_percent_batch = round(fails_for_batch_episodes / (episode / 100) * 100)
+        time_now = datetime.now()
+        time_from_start = time_now - run_start
         print("\nepisode : ", episode)
+        print(f"Temps d'éxécution du script : {calculate_time(time_from_start.seconds)}")
         print("max weights_hidden:", np.max(np.abs(weights_hidden)))
         print("max weights_final:", np.max(np.abs(weights_final)))
         print("max old_output_hidden:", np.max(np.abs(old_output_hidden)))
-        print(f"Moyenne de l'épisode {episode} : {mean_episode_cost}")
+        print(f"Coût moyen de l'épisode {episode} : {mean_episode_cost}")
         print(f"Nombre de succès : {successes} ({successes_percent}%)")
-        print(f"Nombre d'échecs : {fails} ({fails_percent}%)\n")
+        print(f"Nombre d'échecs : {fails} ({fails_percent}%)")
+        print(f"Succès pour la tranche {episode - (episode / 100)} -> {episode} : {successes_for_batch_episodes} ({successes_percent_batch} %)")
+        print(f"Echecs pour la tranche {episode - (episode / 100)} -> {episode} : {fails_for_batch_episodes} ({fails_for_batch_episodes} %)")
+        
 
         file.write(f"\nEpisode : {episode}\n")
         file.write(f"max weights_hidden : {np.max(np.abs(weights_hidden))}\n")
@@ -270,6 +306,8 @@ np.savez(
     f"./29_/parameters_{neurons_hidden}_neurons_{episodes}_episodes.npz",
     weights_hidden=weights_hidden,
     bias_hidden=bias_hidden,
+    weights_hidden2=weights_hidden2,
+    bias_hidden2=bias_hidden2,
     weights_final=weights_final,
     bias_final=bias_final
 )

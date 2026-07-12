@@ -76,7 +76,7 @@ def sigmoid(z):
 
 moves = ["haut", "bas", "droite", "gauche"]
 
-episodes = 75000
+episodes = 500000
 
 neurons = 8
 
@@ -90,6 +90,8 @@ else:
     data = np.load(f"./29_/parameters_{neurons}_neurons_{episodes}_episodes.npz")
     weights_hidden = data["weights_hidden"]
     bias_hidden = data ["bias_hidden"]
+    weights_hidden2 = data["weights_hidden2"]
+    bias_hidden2 = data["bias_hidden2"]
     weights_final = data["weights_final"]
     bias_final = data["bias_final"]
 
@@ -134,7 +136,9 @@ else:
             normalized_current_position = create_network_input(current_position, goal_position, agent_environement)
             z_hidden = np.dot(normalized_current_position, weights_hidden) + bias_hidden
             output_hidden = sigmoid(z_hidden)
-            output_final = np.dot(output_hidden, weights_final) + bias_final
+            z_hidden2 = np.dot(output_hidden, weights_hidden2) + bias_hidden2
+            output_hidden2 = sigmoid(z_hidden2)
+            output_final = np.dot(output_hidden2, weights_final) + bias_final
             action_index = np.argmax(output_final)
             action = moves[action_index]
             print(f"Position : {current_position}\nQ-Values : {output_final}\nAction : {action}\n")
