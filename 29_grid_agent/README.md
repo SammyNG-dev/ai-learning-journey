@@ -699,7 +699,7 @@ Le modèle final atteint toutes les positions accessibles avec :
 et une moyenne de :
 
 ```text
-11.09 mouvements
+10.36 mouvements
 ```
 
 Le projet a également montré une limite fondamentale :

@@ -98,12 +98,12 @@ moves = ["haut", "bas", "droite", "gauche"]
 
 neurons = 8
 
-parameters_file_path = "./29_/best_optimal_model.npz"
+parameters_file_path = "./29_grid_agent/best_optimal_model.npz"
 
 if not os.path.exists(parameters_file_path):
     print("Impossible de charger les paramètres !")
 else:
-    file = open(f"./29_/sortie_play_{date_time}.txt", "w")
+    file = open(f"./29_grid_agent/sortie_play_{date_time}.txt", "w")
     print(parameters_file_path)
     print()
     data = np.load(parameters_file_path)

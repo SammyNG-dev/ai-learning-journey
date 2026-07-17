@@ -171,12 +171,12 @@ np.random.seed(42)
 random.seed(42)
 successes = 0
 fails = 0
-epsilon = 1
-epsilon_min = 0.15
+epsilon = 0.05
+epsilon_min = 0.05
 epsilon_decay = (epsilon - epsilon_min) / (episodes * 0.5)
 evaluation_interval = 10
 
-path_best_model_file = "./29_/best_new_model.npz"
+path_best_model_file = "./29_grid_agent/best_optimal_model.npz"
 
 
 file.write(f"train.py | entrainement du {date_time}\n")
@@ -193,9 +193,10 @@ if os.path.exists(path_best_model_file):
     weights_final = data["weights_final"]
     bias_final = data["bias_final"]
     last_best_score = data["last_best_score"]
-    min_mean_test_moves = data["mean_min_test_moves"]
-
-    print(f"\nScore à battre : {last_best_score} !\n")
+    last_min_mean_test_moves = data["min_mean_test_moves"]
+    if last_best_score != 58:
+        print(f"\nScore à battre : {last_best_score} !")
+    print(f"Moyenne de mouvements dans les tests déterministes à battre : {last_min_mean_test_moves:.2f}\n")
     time.sleep(2)
 else:
     print("Inititialisation aléatoire des paramètres...")
@@ -243,6 +244,7 @@ fails_for_batch_episodes = 0
 best_score = last_best_score
 best_train_score = 0
 min_mean_test_moves = last_min_mean_test_moves
+
 for episode in range(episodes):
     current_position = start_position
     goal_position = random.choice(free_positions)
@@ -418,7 +420,7 @@ for episode in range(episodes):
             print(f"\nNouveau meilleur modèle : {best_score}/{len(free_positions)} obtenu à l'épisode {episode}\n")
             file.write(f"\nNouveau meilleur modèle : {best_score}/{len(free_positions)} obtenu à l'épisode {episode}\n\n")
             np.savez(
-                f"./29_/best_score_model.npz",
+                f"./29_grid_agent/best_score_model.npz",
                 weights_hidden=weights_hidden,
                 bias_hidden=bias_hidden,
                 weights_hidden2=weights_hidden2,
@@ -435,7 +437,7 @@ for episode in range(episodes):
             file.write(f"\nModèle le plus optimal obtenu à l'épisode {episode} avec un moyenne de {min_mean_test_moves:.2f} mouvements\n")
             print(f"\nModèle le plus optimal obtenu à l'épisode {episode} avec un moyenne de {min_mean_test_moves:.2f} mouvements\n")
             np.savez(
-                f"./29_/best_optimal_model.npz",
+                f"./29_grid_agent/best_optimal_model.npz",
                 weights_hidden=weights_hidden,
                 bias_hidden=bias_hidden,
                 weights_hidden2=weights_hidden2,
