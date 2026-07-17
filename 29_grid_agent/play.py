@@ -1,5 +1,9 @@
 import numpy as np
 import os
+from datetime import datetime
+
+now = datetime.now()
+date_time = now.strftime("%d-%m-%Y, %H-%M-%S")
 
 
 def create_world(agent_start_pos, goal_pos, original_world):
@@ -57,11 +61,27 @@ def get_agent_environment(agent_pos, world):
     right = wall_or_outsite(row, col + 1, world)
     return (up, down, left, right) 
 
-def create_network_input(agent_pos, goal_pos, agent_enviro):
+def create_network_input(agent_pos, goal_pos, agent_enviro, entire_grid, two_moves_ago):
     agent_row, agent_col = agent_pos
     goal_row, goal_col = goal_pos
     up, down, left, right = agent_enviro
-    return np.array([agent_row/9, agent_col/9, goal_row/9, goal_col/9, up, down, left, right]).reshape(-1, 8)
+    two_moves_ago_row, two_moves_ago_col = two_moves_ago
+    locale_information = np.array([
+        agent_row/9,
+        agent_col/9,
+        goal_row/9,
+        goal_col/9,
+        up,
+        down,
+        left,
+        right,
+        two_moves_ago_row /9,
+        two_moves_ago_col /9
+    ])
+
+    concatenated = np.concatenate([locale_information, entire_grid])
+
+    return concatenated.reshape(1, 110)
 
 def get_free_positions(world):
     free_positions = []
@@ -76,18 +96,17 @@ def sigmoid(z):
 
 moves = ["haut", "bas", "droite", "gauche"]
 
-episodes = 500000
-
 neurons = 8
 
+parameters_file_path = "./29_/best_optimal_model.npz"
 
-if not os.path.exists(f"./29_/parameters_{neurons}_neurons_{episodes}_episodes.npz"):
+if not os.path.exists(parameters_file_path):
     print("Impossible de charger les paramètres !")
 else:
-    file = open(f"./29_/sortie_play_{neurons}_neurons_{episodes}_episodes.txt", "w")
-    print("Chargement des paramètres...")
+    file = open(f"./29_/sortie_play_{date_time}.txt", "w")
+    print(parameters_file_path)
     print()
-    data = np.load(f"./29_/parameters_{neurons}_neurons_{episodes}_episodes.npz")
+    data = np.load(parameters_file_path)
     weights_hidden = data["weights_hidden"]
     bias_hidden = data ["bias_hidden"]
     weights_hidden2 = data["weights_hidden2"]
@@ -116,7 +135,7 @@ else:
     test_goal_positions = get_free_positions(original_grid)
     test_goal_positions.remove(start_position)
 
-    file.write(f"play.py | {neurons} neurones {episodes} épisodes\n\n")
+    file.write(f"play.py | fichier de paramètres : {parameters_file_path}")
     successes = 0
     fails = 0
 
@@ -128,12 +147,15 @@ else:
         q_values = []
         grid = create_world(start_position, goal_position, original_grid)
         current_position = start_position
+        previous_position = start_position
         nb_moves = 0
         print(f"\nRun {runs} :\n")
         file.write(f"Run {runs}\n\n")
         while current_position != goal_position and nb_moves < 100:
+            position_two_moves_ago = previous_position
+            old_position = current_position
             agent_environement = get_agent_environment(current_position, grid)
-            normalized_current_position = create_network_input(current_position, goal_position, agent_environement)
+            normalized_current_position = create_network_input(current_position, goal_position, agent_environement, grid.flatten(), position_two_moves_ago)
             z_hidden = np.dot(normalized_current_position, weights_hidden) + bias_hidden
             output_hidden = sigmoid(z_hidden)
             z_hidden2 = np.dot(output_hidden, weights_hidden2) + bias_hidden2
@@ -145,6 +167,7 @@ else:
             file.write(f"Position : {current_position}\nQ-Values : {output_final}\nAction : {action}\n\n")
             current_position, grid = move_agent(current_position, action, grid)
             nb_moves += 1
+            previous_position = old_position
             actions_by_test.append(action)
         if current_position == goal_position:
             successes += 1
@@ -165,4 +188,3 @@ else:
     file.write(f"Echecs : {fails} ({fails_percent}%)")
 
     file.close()
-    # os.remove(f"./29_/parameters_{neurons}_neurons_{episodes}_episodes.npz")

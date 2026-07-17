@@ -1,0 +1,1354 @@
+train.py | entrainement du 17-07-2026_01h38m10s
+Inititialisation aléatoire des paramètres...
+
+
+Nouveau meilleur modèle : 2/58 obtenu à l'épisode 49
+
+
+Nouveau meilleur modèle : 9/58 obtenu à l'épisode 59
+
+
+episode : 5000 - epsilon : 0.9830000000000663 - learning rate : 1e-05max weights_hidden : 0.5815628606525556
+max weights_final : 2.475900277501174
+max old_output_hidden : 0.9912574884034782
+Coût moyen de l'épisode 5000 : 9.321311640165929
+Moyenne de mouvements pour la tranche 4950 -> 5000 : 15648.70
+
+Nombre de succès : 1777 (35.54%)
+Nombre d'échecs : 3224 (64.48%)
+Succès pour la tranche 0 -> 5000 : 1777 (35.54 %)
+Echecs pour la tranche 0 -> 5000 : 3224 (3224 %)
+Temps écoulé depuis le début : 0h 1mn 35s
+
+episode : 10000 - epsilon : 0.9660000000001325 - learning rate : 1e-05max weights_hidden : 0.5824713817822639
+max weights_final : 2.631084782511707
+max old_output_hidden : 0.9960833147909074
+Coût moyen de l'épisode 10000 : 7.981953012937676
+Moyenne de mouvements pour la tranche 9900 -> 10000 : 7787.68
+
+Nombre de succès : 3618 (36.18%)
+Nombre d'échecs : 6383 (63.83%)
+Succès pour la tranche 5000 -> 10000 : 1841 (36.82 %)
+Echecs pour la tranche 5000 -> 10000 : 3159 (3159 %)
+Temps écoulé depuis le début : 0h 3mn 13s
+
+episode : 15000 - epsilon : 0.9490000000001988 - learning rate : 1e-05max weights_hidden : 0.5808211537488797
+max weights_final : 2.7758318471799193
+max old_output_hidden : 0.983068833124951
+Coût moyen de l'épisode 15000 : 10.729952321310106
+Moyenne de mouvements pour la tranche 14850 -> 15000 : 5212.84
+
+Nombre de succès : 5410 (36.07%)
+Nombre d'échecs : 9591 (63.94%)
+Succès pour la tranche 10000 -> 15000 : 1792 (35.84 %)
+Echecs pour la tranche 10000 -> 15000 : 3208 (3208 %)
+Temps écoulé depuis le début : 0h 4mn 51s
+
+episode : 20000 - epsilon : 0.9320000000002651 - learning rate : 1e-05max weights_hidden : 0.6390489632212724
+max weights_final : 2.9420865821131965
+max old_output_hidden : 0.9962813857117471
+Coût moyen de l'épisode 20000 : 7.629363169797796
+Moyenne de mouvements pour la tranche 19800 -> 20000 : 3879.11
+
+Nombre de succès : 7251 (36.25%)
+Nombre d'échecs : 12750 (63.75%)
+Succès pour la tranche 15000 -> 20000 : 1841 (36.82 %)
+Echecs pour la tranche 15000 -> 20000 : 3159 (3159 %)
+Temps écoulé depuis le début : 0h 6mn 23s
+
+episode : 25000 - epsilon : 0.9150000000003313 - learning rate : 1e-05max weights_hidden : 0.742402810394518
+max weights_final : 3.1730616987755775
+max old_output_hidden : 0.9718548106011703
+Coût moyen de l'épisode 25000 : 10.750937180988064
+Moyenne de mouvements pour la tranche 24750 -> 25000 : 3085.52
+
+Nombre de succès : 9098 (36.39%)
+Nombre d'échecs : 15903 (63.61%)
+Succès pour la tranche 20000 -> 25000 : 1847 (36.94 %)
+Echecs pour la tranche 20000 -> 25000 : 3153 (3153 %)
+Temps écoulé depuis le début : 0h 7mn 57s
+
+episode : 30000 - epsilon : 0.8980000000003976 - learning rate : 1e-05max weights_hidden : 0.8324142197760699
+max weights_final : 3.3432962671147055
+max old_output_hidden : 0.9833557369052928
+Coût moyen de l'épisode 30000 : 27.05666197827265
+Moyenne de mouvements pour la tranche 29700 -> 30000 : 2557.58
+
+Nombre de succès : 11037 (36.79%)
+Nombre d'échecs : 18964 (63.21%)
+Succès pour la tranche 25000 -> 30000 : 1939 (38.78 %)
+Echecs pour la tranche 25000 -> 30000 : 3061 (3061 %)
+Temps écoulé depuis le début : 0h 9mn 35s
+
+episode : 35000 - epsilon : 0.8810000000004639 - learning rate : 1e-05max weights_hidden : 0.9599756852280223
+max weights_final : 3.7933010624956705
+max old_output_hidden : 0.9885593015510721
+Coût moyen de l'épisode 35000 : 8.640203819264231
+Moyenne de mouvements pour la tranche 34650 -> 35000 : 2192.68
+
+Nombre de succès : 12954 (37.01%)
+Nombre d'échecs : 22047 (62.99%)
+Succès pour la tranche 30000 -> 35000 : 1917 (38.34 %)
+Echecs pour la tranche 30000 -> 35000 : 3083 (3083 %)
+Temps écoulé depuis le début : 0h 11mn 13s
+
+Nouveau meilleur modèle : 12/58 obtenu à l'épisode 35899
+
+
+Nouveau meilleur modèle : 15/58 obtenu à l'épisode 36109
+
+
+Nouveau meilleur modèle : 16/58 obtenu à l'épisode 36339
+
+
+Nouveau meilleur modèle : 17/58 obtenu à l'épisode 36349
+
+
+Nouveau meilleur modèle : 18/58 obtenu à l'épisode 36429
+
+
+episode : 40000 - epsilon : 0.8640000000005301 - learning rate : 1e-05max weights_hidden : 1.4726890305561096
+max weights_final : 4.953005651024904
+max old_output_hidden : 0.8709638734527309
+Coût moyen de l'épisode 40000 : 9.408135007335764
+Moyenne de mouvements pour la tranche 39600 -> 40000 : 1830.44
+
+Nombre de succès : 15112 (37.78%)
+Nombre d'échecs : 24889 (62.22%)
+Succès pour la tranche 35000 -> 40000 : 2158 (43.16 %)
+Echecs pour la tranche 35000 -> 40000 : 2842 (2842 %)
+Temps écoulé depuis le début : 0h 12mn 40s
+
+Nouveau meilleur modèle : 19/58 obtenu à l'épisode 41979
+
+
+Nouveau meilleur modèle : 20/58 obtenu à l'épisode 44399
+
+
+episode : 45000 - epsilon : 0.8470000000005964 - learning rate : 1e-05max weights_hidden : 1.7989596168940842
+max weights_final : 5.423306212386879
+max old_output_hidden : 0.9683102342621052
+Coût moyen de l'épisode 45000 : 6.795004944418299
+Moyenne de mouvements pour la tranche 44550 -> 45000 : 1500.03
+
+Nombre de succès : 17730 (39.4%)
+Nombre d'échecs : 27271 (60.6%)
+Succès pour la tranche 40000 -> 45000 : 2618 (52.36 %)
+Echecs pour la tranche 40000 -> 45000 : 2382 (2382 %)
+Temps écoulé depuis le début : 0h 14mn 0s
+
+Nouveau meilleur modèle : 21/58 obtenu à l'épisode 45139
+
+
+Nouveau meilleur modèle : 22/58 obtenu à l'épisode 45699
+
+
+Nouveau meilleur modèle : 23/58 obtenu à l'épisode 46879
+
+
+Nouveau meilleur modèle : 24/58 obtenu à l'épisode 47769
+
+
+Nouveau meilleur modèle : 25/58 obtenu à l'épisode 48169
+
+
+Nouveau meilleur modèle : 26/58 obtenu à l'épisode 48509
+
+
+Nouveau meilleur modèle : 27/58 obtenu à l'épisode 48839
+
+
+Nouveau meilleur modèle : 28/58 obtenu à l'épisode 48869
+
+
+Nouveau meilleur modèle : 29/58 obtenu à l'épisode 49419
+
+
+Nouveau meilleur modèle : 30/58 obtenu à l'épisode 49609
+
+
+Nouveau meilleur modèle : 31/58 obtenu à l'épisode 49869
+
+
+episode : 50000 - epsilon : 0.8300000000006627 - learning rate : 1e-05max weights_hidden : 2.372663691093149
+max weights_final : 5.58190869310167
+max old_output_hidden : 0.9743916478188909
+Coût moyen de l'épisode 50000 : 9.658645049415426
+Moyenne de mouvements pour la tranche 49500 -> 50000 : 1262.90
+
+Nombre de succès : 20624 (41.25%)
+Nombre d'échecs : 29377 (58.75%)
+Succès pour la tranche 45000 -> 50000 : 2894 (57.88 %)
+Echecs pour la tranche 45000 -> 50000 : 2106 (2106 %)
+Temps écoulé depuis le début : 0h 15mn 17s
+
+Nouveau meilleur modèle : 32/58 obtenu à l'épisode 50939
+
+
+Nouveau meilleur modèle : 33/58 obtenu à l'épisode 51369
+
+
+Nouveau meilleur modèle : 34/58 obtenu à l'épisode 51859
+
+
+episode : 55000 - epsilon : 0.8130000000007289 - learning rate : 1e-05max weights_hidden : 3.186529427346238
+max weights_final : 5.722596171787689
+max old_output_hidden : 0.9806937802435426
+Coût moyen de l'épisode 55000 : 9.584129120823258
+Moyenne de mouvements pour la tranche 54450 -> 55000 : 1029.95
+
+Nombre de succès : 23821 (43.31%)
+Nombre d'échecs : 31180 (56.69%)
+Succès pour la tranche 50000 -> 55000 : 3197 (63.94 %)
+Echecs pour la tranche 50000 -> 55000 : 1803 (1803 %)
+Temps écoulé depuis le début : 0h 16mn 25s
+
+episode : 60000 - epsilon : 0.7960000000007952 - learning rate : 1e-05max weights_hidden : 4.003917169858459
+max weights_final : 6.1897794091556575
+max old_output_hidden : 0.9724703391614005
+Coût moyen de l'épisode 60000 : 13.900006890149385
+Moyenne de mouvements pour la tranche 59400 -> 60000 : 892.95
+
+Nombre de succès : 27181 (45.3%)
+Nombre d'échecs : 32820 (54.7%)
+Succès pour la tranche 55000 -> 60000 : 3360 (67.2 %)
+Echecs pour la tranche 55000 -> 60000 : 1640 (1640 %)
+Temps écoulé depuis le début : 0h 17mn 29s
+
+Nouveau meilleur modèle : 35/58 obtenu à l'épisode 60229
+
+
+episode : 65000 - epsilon : 0.7790000000008614 - learning rate : 1e-05max weights_hidden : 4.636330185024903
+max weights_final : 7.04183717847573
+max old_output_hidden : 0.9657827228473527
+Coût moyen de l'épisode 65000 : 9.40537105464245
+Moyenne de mouvements pour la tranche 64350 -> 65000 : 789.04
+
+Nombre de succès : 30670 (47.18%)
+Nombre d'échecs : 34331 (52.82%)
+Succès pour la tranche 60000 -> 65000 : 3489 (69.78 %)
+Echecs pour la tranche 60000 -> 65000 : 1511 (1511 %)
+Temps écoulé depuis le début : 0h 18mn 32s
+
+Nouveau meilleur modèle : 36/58 obtenu à l'épisode 65759
+
+
+Nouveau meilleur modèle : 37/58 obtenu à l'épisode 67439
+
+
+Nouveau meilleur modèle : 38/58 obtenu à l'épisode 67449
+
+
+episode : 70000 - epsilon : 0.7620000000009277 - learning rate : 1e-05max weights_hidden : 5.095673762804019
+max weights_final : 7.687604635944241
+max old_output_hidden : 0.9853128935957091
+Coût moyen de l'épisode 70000 : 15.716401938004811
+Moyenne de mouvements pour la tranche 69300 -> 70000 : 690.97
+
+Nombre de succès : 34306 (49.01%)
+Nombre d'échecs : 35695 (50.99%)
+Succès pour la tranche 65000 -> 70000 : 3636 (72.72 %)
+Echecs pour la tranche 65000 -> 70000 : 1364 (1364 %)
+Temps écoulé depuis le début : 0h 19mn 30s
+
+Nouveau meilleur modèle : 39/58 obtenu à l'épisode 70209
+
+
+Nouveau meilleur modèle : 40/58 obtenu à l'épisode 70679
+
+
+Nouveau meilleur modèle : 41/58 obtenu à l'épisode 74249
+
+
+episode : 75000 - epsilon : 0.745000000000994 - learning rate : 1e-05max weights_hidden : 5.443652859436033
+max weights_final : 8.151501772372285
+max old_output_hidden : 0.9716172024959991
+Coût moyen de l'épisode 75000 : 8.588787636988767
+Moyenne de mouvements pour la tranche 74250 -> 75000 : 622.77
+
+Nombre de succès : 38004 (50.67%)
+Nombre d'échecs : 36997 (49.33%)
+Succès pour la tranche 70000 -> 75000 : 3698 (73.96 %)
+Echecs pour la tranche 70000 -> 75000 : 1302 (1302 %)
+Temps écoulé depuis le début : 0h 20mn 27s
+
+Nouveau meilleur modèle : 42/58 obtenu à l'épisode 75979
+
+
+Nouveau meilleur modèle : 43/58 obtenu à l'épisode 77999
+
+
+episode : 80000 - epsilon : 0.7280000000010602 - learning rate : 1e-05max weights_hidden : 5.7017353109597195
+max weights_final : 8.560155013867524
+max old_output_hidden : 0.99091161461288
+Coût moyen de l'épisode 80000 : 7.566878422880251
+Moyenne de mouvements pour la tranche 79200 -> 80000 : 571.20
+
+Nombre de succès : 41741 (52.18%)
+Nombre d'échecs : 38260 (47.83%)
+Succès pour la tranche 75000 -> 80000 : 3737 (74.74 %)
+Echecs pour la tranche 75000 -> 80000 : 1263 (1263 %)
+Temps écoulé depuis le début : 0h 21mn 22s
+
+episode : 85000 - epsilon : 0.7110000000011265 - learning rate : 1e-05max weights_hidden : 5.947573563414262
+max weights_final : 8.847420862818637
+max old_output_hidden : 0.9978221594103485
+Coût moyen de l'épisode 85000 : 7.651732997103817
+Moyenne de mouvements pour la tranche 84150 -> 85000 : 515.19
+
+Nombre de succès : 45535 (53.57%)
+Nombre d'échecs : 39466 (46.43%)
+Succès pour la tranche 80000 -> 85000 : 3794 (75.88 %)
+Echecs pour la tranche 80000 -> 85000 : 1206 (1206 %)
+Temps écoulé depuis le début : 0h 22mn 14s
+
+episode : 90000 - epsilon : 0.6940000000011928 - learning rate : 1e-05max weights_hidden : 6.126433224911791
+max weights_final : 9.140824439649581
+max old_output_hidden : 0.9959590494628614
+Coût moyen de l'épisode 90000 : 6.552925085646139
+Moyenne de mouvements pour la tranche 89100 -> 90000 : 449.01
+
+Nombre de succès : 49516 (55.02%)
+Nombre d'échecs : 40485 (44.98%)
+Succès pour la tranche 85000 -> 90000 : 3981 (79.62 %)
+Echecs pour la tranche 85000 -> 90000 : 1019 (1019 %)
+Temps écoulé depuis le début : 0h 23mn 2s
+
+Nouveau meilleur modèle : 45/58 obtenu à l'épisode 92659
+
+
+Nouveau meilleur modèle : 46/58 obtenu à l'épisode 93389
+
+
+episode : 95000 - epsilon : 0.677000000001259 - learning rate : 1e-05max weights_hidden : 6.291128447375442
+max weights_final : 9.375239666510335
+max old_output_hidden : 0.9898954987927889
+Coût moyen de l'épisode 95000 : 30.444273728279008
+Moyenne de mouvements pour la tranche 94050 -> 95000 : 410.26
+
+Nombre de succès : 53527 (56.34%)
+Nombre d'échecs : 41474 (43.66%)
+Succès pour la tranche 90000 -> 95000 : 4011 (80.22 %)
+Echecs pour la tranche 90000 -> 95000 : 989 (989 %)
+Temps écoulé depuis le début : 0h 23mn 49s
+
+Nouveau meilleur modèle : 47/58 obtenu à l'épisode 96899
+
+
+episode : 100000 - epsilon : 0.6600000000013253 - learning rate : 1e-05max weights_hidden : 6.385693206663746
+max weights_final : 9.553142702756574
+max old_output_hidden : 0.9972757210865034
+Coût moyen de l'épisode 100000 : 35.499511637388295
+Moyenne de mouvements pour la tranche 99000 -> 100000 : 378.85
+
+Nombre de succès : 57586 (57.59%)
+Nombre d'échecs : 42415 (42.42%)
+Succès pour la tranche 95000 -> 100000 : 4059 (81.18 %)
+Echecs pour la tranche 95000 -> 100000 : 941 (941 %)
+Temps écoulé depuis le début : 0h 24mn 38s
+
+Nouveau meilleur modèle : 48/58 obtenu à l'épisode 101659
+
+
+Nouveau meilleur modèle : 49/58 obtenu à l'épisode 101889
+
+
+Nouveau meilleur modèle : 50/58 obtenu à l'épisode 102049
+
+
+episode : 105000 - epsilon : 0.6430000000013916 - learning rate : 1e-05max weights_hidden : 6.361821602896747
+max weights_final : 9.797165836121627
+max old_output_hidden : 0.9948263001494897
+Coût moyen de l'épisode 105000 : 4.8792566188899125
+Moyenne de mouvements pour la tranche 103950 -> 105000 : 331.94
+
+Nombre de succès : 61718 (58.78%)
+Nombre d'échecs : 43283 (41.22%)
+Succès pour la tranche 100000 -> 105000 : 4132 (82.64 %)
+Echecs pour la tranche 100000 -> 105000 : 868 (868 %)
+Temps écoulé depuis le début : 0h 25mn 20s
+
+episode : 110000 - epsilon : 0.6260000000014578 - learning rate : 1e-05max weights_hidden : 6.359080863931747
+max weights_final : 10.071506922655022
+max old_output_hidden : 0.9990610101002058
+Coût moyen de l'épisode 110000 : 9.928708201627487
+Moyenne de mouvements pour la tranche 108900 -> 110000 : 300.57
+
+Nombre de succès : 65936 (59.94%)
+Nombre d'échecs : 44065 (40.06%)
+Succès pour la tranche 105000 -> 110000 : 4218 (84.36 %)
+Echecs pour la tranche 105000 -> 110000 : 782 (782 %)
+Temps écoulé depuis le début : 0h 25mn 59s
+
+Nouveau meilleur modèle : 51/58 obtenu à l'épisode 112549
+
+
+Nouveau meilleur modèle : 52/58 obtenu à l'épisode 114689
+
+
+episode : 115000 - epsilon : 0.6090000000015241 - learning rate : 1e-05max weights_hidden : 6.373589895486078
+max weights_final : 10.354574615913858
+max old_output_hidden : 0.9563471994048782
+Coût moyen de l'épisode 115000 : 7.2786644077328315
+Moyenne de mouvements pour la tranche 113850 -> 115000 : 269.33
+
+Nombre de succès : 70236 (61.07%)
+Nombre d'échecs : 44765 (38.93%)
+Succès pour la tranche 110000 -> 115000 : 4300 (86.0 %)
+Echecs pour la tranche 110000 -> 115000 : 700 (700 %)
+Temps écoulé depuis le début : 0h 26mn 35s
+
+Nouveau meilleur modèle : 53/58 obtenu à l'épisode 116769
+
+
+episode : 120000 - epsilon : 0.5920000000015904 - learning rate : 1e-05max weights_hidden : 6.329537021967385
+max weights_final : 10.611394612338325
+max old_output_hidden : 0.9987510289893584
+Coût moyen de l'épisode 120000 : 7.1254656324396315
+Moyenne de mouvements pour la tranche 118800 -> 120000 : 244.42
+
+Nombre de succès : 74588 (62.16%)
+Nombre d'échecs : 45413 (37.84%)
+Succès pour la tranche 115000 -> 120000 : 4352 (87.04 %)
+Echecs pour la tranche 115000 -> 120000 : 648 (648 %)
+Temps écoulé depuis le début : 0h 27mn 11s
+
+episode : 125000 - epsilon : 0.5750000000016566 - learning rate : 1e-05max weights_hidden : 6.420030245027998
+max weights_final : 10.82361305679389
+max old_output_hidden : 0.9755908299330645
+Coût moyen de l'épisode 125000 : 2.7180816382795343
+Moyenne de mouvements pour la tranche 123750 -> 125000 : 229.36
+
+Nombre de succès : 78953 (63.16%)
+Nombre d'échecs : 46048 (36.84%)
+Succès pour la tranche 120000 -> 125000 : 4365 (87.3 %)
+Echecs pour la tranche 120000 -> 125000 : 635 (635 %)
+Temps écoulé depuis le début : 0h 27mn 46s
+
+Nouveau meilleur modèle : 54/58 obtenu à l'épisode 128229
+
+
+episode : 130000 - epsilon : 0.5580000000017229 - learning rate : 1e-05max weights_hidden : 6.632535429976466
+max weights_final : 11.054903845531424
+max old_output_hidden : 0.9493309745995978
+Coût moyen de l'épisode 130000 : 5.244587186088637
+Moyenne de mouvements pour la tranche 128700 -> 130000 : 202.24
+
+Nombre de succès : 83411 (64.16%)
+Nombre d'échecs : 46590 (35.84%)
+Succès pour la tranche 125000 -> 130000 : 4458 (89.16 %)
+Echecs pour la tranche 125000 -> 130000 : 542 (542 %)
+Temps écoulé depuis le début : 0h 28mn 18s
+
+episode : 135000 - epsilon : 0.5410000000017892 - learning rate : 1e-05max weights_hidden : 6.8468991747777475
+max weights_final : 11.269160204301842
+max old_output_hidden : 0.9995150679011946
+Coût moyen de l'épisode 135000 : 10.083663334137055
+Moyenne de mouvements pour la tranche 133650 -> 135000 : 192.26
+
+Nombre de succès : 87878 (65.09%)
+Nombre d'échecs : 47123 (34.91%)
+Succès pour la tranche 130000 -> 135000 : 4467 (89.34 %)
+Echecs pour la tranche 130000 -> 135000 : 533 (533 %)
+Temps écoulé depuis le début : 0h 28mn 50s
+
+Nouveau meilleur modèle : 55/58 obtenu à l'épisode 135879
+
+
+Nouveau meilleur modèle : 56/58 obtenu à l'épisode 139699
+
+
+episode : 140000 - epsilon : 0.5240000000018554 - learning rate : 1e-05max weights_hidden : 7.0581076391189015
+max weights_final : 11.46831531507041
+max old_output_hidden : 0.9995350016146708
+Coût moyen de l'épisode 140000 : 8.036901754864688
+Moyenne de mouvements pour la tranche 138600 -> 140000 : 173.65
+
+Nombre de succès : 92427 (66.02%)
+Nombre d'échecs : 47574 (33.98%)
+Succès pour la tranche 135000 -> 140000 : 4549 (90.98 %)
+Echecs pour la tranche 135000 -> 140000 : 451 (451 %)
+Temps écoulé depuis le début : 0h 29mn 20s
+
+episode : 145000 - epsilon : 0.5070000000019217 - learning rate : 1e-05max weights_hidden : 7.211232788306685
+max weights_final : 11.671314411072974
+max old_output_hidden : 0.9992495970552261
+Coût moyen de l'épisode 145000 : 6.645176124875943
+Moyenne de mouvements pour la tranche 143550 -> 145000 : 157.93
+
+Nombre de succès : 97024 (66.91%)
+Nombre d'échecs : 47977 (33.09%)
+Succès pour la tranche 140000 -> 145000 : 4597 (91.94 %)
+Echecs pour la tranche 140000 -> 145000 : 403 (403 %)
+Temps écoulé depuis le début : 0h 29mn 51s
+
+episode : 150000 - epsilon : 0.49000000000198796 - learning rate : 1e-05max weights_hidden : 7.37542038768235
+max weights_final : 11.91095430311463
+max old_output_hidden : 0.9999609116980464
+Coût moyen de l'épisode 150000 : 19.5641062881513
+Moyenne de mouvements pour la tranche 148500 -> 150000 : 143.33
+
+Nombre de succès : 101676 (67.78%)
+Nombre d'échecs : 48325 (32.22%)
+Succès pour la tranche 145000 -> 150000 : 4652 (93.04 %)
+Echecs pour la tranche 145000 -> 150000 : 348 (348 %)
+Temps écoulé depuis le début : 0h 30mn 18s
+
+episode : 155000 - epsilon : 0.4730000000020542 - learning rate : 1e-05max weights_hidden : 7.511941389235525
+max weights_final : 12.11470564866068
+max old_output_hidden : 0.9994858559226958
+Coût moyen de l'épisode 155000 : 6.478213255957149
+Moyenne de mouvements pour la tranche 153450 -> 155000 : 135.96
+
+Nombre de succès : 106372 (68.63%)
+Nombre d'échecs : 48629 (31.37%)
+Succès pour la tranche 150000 -> 155000 : 4696 (93.92 %)
+Echecs pour la tranche 150000 -> 155000 : 304 (304 %)
+Temps écoulé depuis le début : 0h 30mn 46s
+
+episode : 160000 - epsilon : 0.4560000000021205 - learning rate : 1e-05max weights_hidden : 7.633072874407294
+max weights_final : 12.309985194444227
+max old_output_hidden : 0.8858618766365193
+Coût moyen de l'épisode 160000 : 3.184701075776085
+Moyenne de mouvements pour la tranche 158400 -> 160000 : 119.40
+
+Nombre de succès : 111133 (69.46%)
+Nombre d'échecs : 48868 (30.54%)
+Succès pour la tranche 155000 -> 160000 : 4761 (95.22 %)
+Echecs pour la tranche 155000 -> 160000 : 239 (239 %)
+Temps écoulé depuis le début : 0h 31mn 11s
+
+Nouveau meilleur modèle : 58/58 obtenu à l'épisode 162139
+
+
+Modèle le plus optimal obtenu à l'épisode 162139 avec un moyenne de 12.47 mouvements
+
+episode : 165000 - epsilon : 0.43900000000218675 - learning rate : 1e-05max weights_hidden : 7.754681784679876
+max weights_final : 12.494841058640775
+max old_output_hidden : 0.9997886376593134
+Coût moyen de l'épisode 165000 : 7.624374664513917
+Moyenne de mouvements pour la tranche 163350 -> 165000 : 116.46
+
+Nombre de succès : 115867 (70.22%)
+Nombre d'échecs : 49134 (29.78%)
+Succès pour la tranche 160000 -> 165000 : 4734 (94.68 %)
+Echecs pour la tranche 160000 -> 165000 : 266 (266 %)
+Temps écoulé depuis le début : 0h 31mn 40s
+
+episode : 170000 - epsilon : 0.422000000002253 - learning rate : 1e-05max weights_hidden : 7.840463003069917
+max weights_final : 12.683473719379256
+max old_output_hidden : 0.9996838479880883
+Coût moyen de l'épisode 170000 : 5.665085257997134
+Moyenne de mouvements pour la tranche 168300 -> 170000 : 103.84
+
+Nombre de succès : 120662 (70.98%)
+Nombre d'échecs : 49339 (29.02%)
+Succès pour la tranche 165000 -> 170000 : 4795 (95.9 %)
+Echecs pour la tranche 165000 -> 170000 : 205 (205 %)
+Temps écoulé depuis le début : 0h 32mn 3s
+
+episode : 175000 - epsilon : 0.4050000000023193 - learning rate : 1e-05max weights_hidden : 7.9349751441226415
+max weights_final : 12.858001344364618
+max old_output_hidden : 0.9600926380149093
+Coût moyen de l'épisode 175000 : 3.5002006762520725
+Moyenne de mouvements pour la tranche 173250 -> 175000 : 94.04
+
+Nombre de succès : 125494 (71.71%)
+Nombre d'échecs : 49507 (28.29%)
+Succès pour la tranche 170000 -> 175000 : 4832 (96.64 %)
+Echecs pour la tranche 170000 -> 175000 : 168 (168 %)
+Temps écoulé depuis le début : 0h 32mn 25s
+
+Modèle le plus optimal obtenu à l'épisode 176779 avec un moyenne de 12.02 mouvements
+
+episode : 180000 - epsilon : 0.38800000000238555 - learning rate : 1e-05max weights_hidden : 7.982659282695544
+max weights_final : 12.996473234837724
+max old_output_hidden : 0.9991996526072066
+Coût moyen de l'épisode 180000 : 4.366721640075874
+Moyenne de mouvements pour la tranche 178200 -> 180000 : 89.86
+
+Nombre de succès : 130320 (72.4%)
+Nombre d'échecs : 49681 (27.6%)
+Succès pour la tranche 175000 -> 180000 : 4826 (96.52 %)
+Echecs pour la tranche 175000 -> 180000 : 174 (174 %)
+Temps écoulé depuis le début : 0h 32mn 48s
+
+episode : 185000 - epsilon : 0.3710000000024518 - learning rate : 1e-05max weights_hidden : 8.027400571854141
+max weights_final : 13.134565116907998
+max old_output_hidden : 0.9999469719167058
+Coût moyen de l'épisode 185000 : 3.518758715644946
+Moyenne de mouvements pour la tranche 183150 -> 185000 : 82.80
+
+Nombre de succès : 135176 (73.07%)
+Nombre d'échecs : 49825 (26.93%)
+Succès pour la tranche 180000 -> 185000 : 4856 (97.12 %)
+Echecs pour la tranche 180000 -> 185000 : 144 (144 %)
+Temps écoulé depuis le début : 0h 33mn 9s
+
+Modèle le plus optimal obtenu à l'épisode 188549 avec un moyenne de 11.88 mouvements
+
+Modèle le plus optimal obtenu à l'épisode 189409 avec un moyenne de 11.78 mouvements
+
+episode : 190000 - epsilon : 0.3540000000025181 - learning rate : 1e-05max weights_hidden : 8.111194997935913
+max weights_final : 13.263823410105964
+max old_output_hidden : 0.999970320226413
+Coût moyen de l'épisode 190000 : 0.8420000469448993
+Moyenne de mouvements pour la tranche 188100 -> 190000 : 74.50
+
+Nombre de succès : 140071 (73.72%)
+Nombre d'échecs : 49930 (26.28%)
+Succès pour la tranche 185000 -> 190000 : 4895 (97.9 %)
+Echecs pour la tranche 185000 -> 190000 : 105 (105 %)
+Temps écoulé depuis le début : 0h 33mn 28s
+
+Modèle le plus optimal obtenu à l'épisode 191079 avec un moyenne de 11.53 mouvements
+
+episode : 195000 - epsilon : 0.33700000000258434 - learning rate : 1e-05max weights_hidden : 8.146550318082843
+max weights_final : 13.381062055060395
+max old_output_hidden : 0.9999825681837881
+Coût moyen de l'épisode 195000 : 1.3816721362023723
+Moyenne de mouvements pour la tranche 193050 -> 195000 : 68.94
+
+Nombre de succès : 144976 (74.35%)
+Nombre d'échecs : 50025 (25.65%)
+Succès pour la tranche 190000 -> 195000 : 4905 (98.1 %)
+Echecs pour la tranche 190000 -> 195000 : 95 (95 %)
+Temps écoulé depuis le début : 0h 33mn 47s
+
+episode : 200000 - epsilon : 0.3200000000026506 - learning rate : 1e-05max weights_hidden : 8.165002162392152
+max weights_final : 13.478017673159847
+max old_output_hidden : 0.9998894909784849
+Coût moyen de l'épisode 200000 : 4.629469599321638
+Moyenne de mouvements pour la tranche 198000 -> 200000 : 65.86
+
+Nombre de succès : 149881 (74.94%)
+Nombre d'échecs : 50120 (25.06%)
+Succès pour la tranche 195000 -> 200000 : 4905 (98.1 %)
+Echecs pour la tranche 195000 -> 200000 : 95 (95 %)
+Temps écoulé depuis le début : 0h 34mn 6s
+
+episode : 205000 - epsilon : 0.3030000000027169 - learning rate : 1e-05max weights_hidden : 8.201335636745245
+max weights_final : 13.58811585147899
+max old_output_hidden : 0.9997811235549724
+Coût moyen de l'épisode 205000 : 4.965953679591154
+Moyenne de mouvements pour la tranche 202950 -> 205000 : 60.14
+
+Nombre de succès : 154793 (75.51%)
+Nombre d'échecs : 50208 (24.49%)
+Succès pour la tranche 200000 -> 205000 : 4912 (98.24 %)
+Echecs pour la tranche 200000 -> 205000 : 88 (88 %)
+Temps écoulé depuis le début : 0h 34mn 23s
+
+episode : 210000 - epsilon : 0.28600000000278314 - learning rate : 1e-05max weights_hidden : 8.213156088631395
+max weights_final : 13.68875756699595
+max old_output_hidden : 0.9733557970593757
+Coût moyen de l'épisode 210000 : 1.6048935721087263
+Moyenne de mouvements pour la tranche 207900 -> 210000 : 56.57
+
+Nombre de succès : 159718 (76.06%)
+Nombre d'échecs : 50283 (23.94%)
+Succès pour la tranche 205000 -> 210000 : 4925 (98.5 %)
+Echecs pour la tranche 205000 -> 210000 : 75 (75 %)
+Temps écoulé depuis le début : 0h 34mn 39s
+
+episode : 215000 - epsilon : 0.2690000000028494 - learning rate : 1e-05max weights_hidden : 8.25684765555395
+max weights_final : 13.782215078606702
+max old_output_hidden : 0.9992374136272706
+Coût moyen de l'épisode 215000 : 6.228067258381975
+Moyenne de mouvements pour la tranche 212850 -> 215000 : 52.89
+
+Nombre de succès : 164646 (76.58%)
+Nombre d'échecs : 50355 (23.42%)
+Succès pour la tranche 210000 -> 215000 : 4928 (98.56 %)
+Echecs pour la tranche 210000 -> 215000 : 72 (72 %)
+Temps écoulé depuis le début : 0h 34mn 55s
+
+episode : 220000 - epsilon : 0.25200000000291567 - learning rate : 1e-05max weights_hidden : 8.269008281930649
+max weights_final : 13.841555004518133
+max old_output_hidden : 0.999268480153892
+Coût moyen de l'épisode 220000 : 1.9440483616848736
+Moyenne de mouvements pour la tranche 217800 -> 220000 : 50.12
+
+Nombre de succès : 169573 (77.08%)
+Nombre d'échecs : 50428 (22.92%)
+Succès pour la tranche 215000 -> 220000 : 4927 (98.54 %)
+Echecs pour la tranche 215000 -> 220000 : 73 (73 %)
+Temps écoulé depuis le début : 0h 35mn 11s
+
+episode : 225000 - epsilon : 0.23500000000298193 - learning rate : 1e-05max weights_hidden : 8.267013652887094
+max weights_final : 13.906554347091205
+max old_output_hidden : 0.9997841983879493
+Coût moyen de l'épisode 225000 : 0.40117431694137407
+Moyenne de mouvements pour la tranche 222750 -> 225000 : 47.69
+
+Nombre de succès : 174507 (77.56%)
+Nombre d'échecs : 50494 (22.44%)
+Succès pour la tranche 220000 -> 225000 : 4934 (98.68 %)
+Echecs pour la tranche 220000 -> 225000 : 66 (66 %)
+Temps écoulé depuis le début : 0h 35mn 29s
+
+Modèle le plus optimal obtenu à l'épisode 229619 avec un moyenne de 11.50 mouvements
+
+episode : 230000 - epsilon : 0.2180000000030482 - learning rate : 1e-05max weights_hidden : 8.302761892272216
+max weights_final : 13.963665307915669
+max old_output_hidden : 0.9990218388295706
+Coût moyen de l'épisode 230000 : 8.845963061951842
+Moyenne de mouvements pour la tranche 227700 -> 230000 : 44.67
+
+Nombre de succès : 179435 (78.02%)
+Nombre d'échecs : 50566 (21.99%)
+Succès pour la tranche 225000 -> 230000 : 4928 (98.56 %)
+Echecs pour la tranche 225000 -> 230000 : 72 (72 %)
+Temps écoulé depuis le début : 0h 35mn 45s
+
+episode : 235000 - epsilon : 0.20100000000311447 - learning rate : 1e-05max weights_hidden : 8.374416772621272
+max weights_final : 14.03665973934214
+max old_output_hidden : 0.999881690338316
+Coût moyen de l'épisode 235000 : 2.275703998492898
+Moyenne de mouvements pour la tranche 232650 -> 235000 : 42.00
+
+Nombre de succès : 184369 (78.45%)
+Nombre d'échecs : 50632 (21.55%)
+Succès pour la tranche 230000 -> 235000 : 4934 (98.68 %)
+Echecs pour la tranche 230000 -> 235000 : 66 (66 %)
+Temps écoulé depuis le début : 0h 36mn 0s
+
+episode : 240000 - epsilon : 0.18400000000318073 - learning rate : 1e-05max weights_hidden : 8.35820982294579
+max weights_final : 14.093735675255585
+max old_output_hidden : 0.9984026906788307
+Coût moyen de l'épisode 240000 : 6.3572553286330455
+Moyenne de mouvements pour la tranche 237600 -> 240000 : 37.53
+
+Nombre de succès : 189327 (78.89%)
+Nombre d'échecs : 50674 (21.11%)
+Succès pour la tranche 235000 -> 240000 : 4958 (99.16 %)
+Echecs pour la tranche 235000 -> 240000 : 42 (42 %)
+Temps écoulé depuis le début : 0h 36mn 14s
+
+episode : 245000 - epsilon : 0.167000000003247 - learning rate : 1e-05max weights_hidden : 8.39519451582363
+max weights_final : 14.137239254833174
+max old_output_hidden : 0.9983830080950192
+Coût moyen de l'épisode 245000 : 1.2487849013326775
+Moyenne de mouvements pour la tranche 242550 -> 245000 : 38.35
+
+Nombre de succès : 194262 (79.29%)
+Nombre d'échecs : 50739 (20.71%)
+Succès pour la tranche 240000 -> 245000 : 4935 (98.7 %)
+Echecs pour la tranche 240000 -> 245000 : 65 (65 %)
+Temps écoulé depuis le début : 0h 36mn 28s
+
+episode : 250000 - epsilon : 0.15000000000331326 - learning rate : 1e-05max weights_hidden : 8.410053662434128
+max weights_final : 14.183169228214453
+max old_output_hidden : 0.9995206574681722
+Coût moyen de l'épisode 250000 : 3.3472227898388582
+Moyenne de mouvements pour la tranche 247500 -> 250000 : 35.10
+
+Nombre de succès : 199210 (79.68%)
+Nombre d'échecs : 50791 (20.32%)
+Succès pour la tranche 245000 -> 250000 : 4948 (98.96 %)
+Echecs pour la tranche 245000 -> 250000 : 52 (52 %)
+Temps écoulé depuis le début : 0h 36mn 42s
+
+episode : 255000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.433194734509804
+max weights_final : 14.242909813334169
+max old_output_hidden : 0.9964254289432505
+Coût moyen de l'épisode 255000 : 0.93009077667631
+Moyenne de mouvements pour la tranche 252450 -> 255000 : 32.13
+
+Nombre de succès : 204176 (80.07%)
+Nombre d'échecs : 50825 (19.93%)
+Succès pour la tranche 250000 -> 255000 : 4966 (99.32 %)
+Echecs pour la tranche 250000 -> 255000 : 34 (34 %)
+Temps écoulé depuis le début : 0h 36mn 55s
+
+episode : 260000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.442623191011192
+max weights_final : 14.275597157965018
+max old_output_hidden : 0.9675709585396646
+Coût moyen de l'épisode 260000 : 2.324576154883704
+Moyenne de mouvements pour la tranche 257400 -> 260000 : 32.11
+
+Nombre de succès : 209135 (80.44%)
+Nombre d'échecs : 50866 (19.56%)
+Succès pour la tranche 255000 -> 260000 : 4959 (99.18 %)
+Echecs pour la tranche 255000 -> 260000 : 41 (41 %)
+Temps écoulé depuis le début : 0h 37mn 8s
+
+Modèle le plus optimal obtenu à l'épisode 260089 avec un moyenne de 11.47 mouvements
+
+episode : 265000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.437318505171412
+max weights_final : 14.318066560537652
+max old_output_hidden : 0.9990933125303277
+Coût moyen de l'épisode 265000 : 4.641542162592019
+Moyenne de mouvements pour la tranche 262350 -> 265000 : 31.70
+
+Nombre de succès : 214094 (80.79%)
+Nombre d'échecs : 50907 (19.21%)
+Succès pour la tranche 260000 -> 265000 : 4959 (99.18 %)
+Echecs pour la tranche 260000 -> 265000 : 41 (41 %)
+Temps écoulé depuis le début : 0h 37mn 22s
+
+Modèle le plus optimal obtenu à l'épisode 268649 avec un moyenne de 11.22 mouvements
+
+episode : 270000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.455256808536106
+max weights_final : 14.338031408665639
+max old_output_hidden : 0.9996547779608802
+Coût moyen de l'épisode 270000 : 0.923049941918303
+Moyenne de mouvements pour la tranche 267300 -> 270000 : 30.40
+
+Nombre de succès : 219054 (81.13%)
+Nombre d'échecs : 50947 (18.87%)
+Succès pour la tranche 265000 -> 270000 : 4960 (99.2 %)
+Echecs pour la tranche 265000 -> 270000 : 40 (40 %)
+Temps écoulé depuis le début : 0h 37mn 35s
+
+episode : 275000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.454324985411589
+max weights_final : 14.37172052252394
+max old_output_hidden : 0.9995926359733607
+Coût moyen de l'épisode 275000 : 6.189826921096177
+Moyenne de mouvements pour la tranche 272250 -> 275000 : 29.87
+
+Nombre de succès : 224019 (81.46%)
+Nombre d'échecs : 50982 (18.54%)
+Succès pour la tranche 270000 -> 275000 : 4965 (99.3 %)
+Echecs pour la tranche 270000 -> 275000 : 35 (35 %)
+Temps écoulé depuis le début : 0h 37mn 48s
+
+episode : 280000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.463459005926017
+max weights_final : 14.391722555351556
+max old_output_hidden : 0.9960326712242651
+Coût moyen de l'épisode 280000 : 3.0757498435433437
+Moyenne de mouvements pour la tranche 277200 -> 280000 : 29.53
+
+Nombre de succès : 228974 (81.78%)
+Nombre d'échecs : 51027 (18.22%)
+Succès pour la tranche 275000 -> 280000 : 4955 (99.1 %)
+Echecs pour la tranche 275000 -> 280000 : 45 (45 %)
+Temps écoulé depuis le début : 0h 38mn 2s
+
+episode : 285000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.458731811740192
+max weights_final : 14.409035740409818
+max old_output_hidden : 0.9997418622316253
+Coût moyen de l'épisode 285000 : 6.0143013672914085
+Moyenne de mouvements pour la tranche 282150 -> 285000 : 29.73
+
+Nombre de succès : 233919 (82.08%)
+Nombre d'échecs : 51082 (17.92%)
+Succès pour la tranche 280000 -> 285000 : 4945 (98.9 %)
+Echecs pour la tranche 280000 -> 285000 : 55 (55 %)
+Temps écoulé depuis le début : 0h 38mn 15s
+
+episode : 290000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.465478602909744
+max weights_final : 14.42858723007098
+max old_output_hidden : 0.9977865989980778
+Coût moyen de l'épisode 290000 : 0.6825665503700781
+Moyenne de mouvements pour la tranche 287100 -> 290000 : 27.90
+
+Nombre de succès : 238891 (82.38%)
+Nombre d'échecs : 51110 (17.62%)
+Succès pour la tranche 285000 -> 290000 : 4972 (99.44 %)
+Echecs pour la tranche 285000 -> 290000 : 28 (28 %)
+Temps écoulé depuis le début : 0h 38mn 28s
+
+episode : 295000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.428019857437501
+max weights_final : 14.455109232918797
+max old_output_hidden : 0.9932298191420892
+Coût moyen de l'épisode 295000 : 0.18305880931422186
+Moyenne de mouvements pour la tranche 292050 -> 295000 : 28.18
+
+Nombre de succès : 243845 (82.66%)
+Nombre d'échecs : 51156 (17.34%)
+Succès pour la tranche 290000 -> 295000 : 4954 (99.08 %)
+Echecs pour la tranche 290000 -> 295000 : 46 (46 %)
+Temps écoulé depuis le début : 0h 38mn 41s
+
+episode : 300000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.383176920859263
+max weights_final : 14.476627437788252
+max old_output_hidden : 0.9965109641353601
+Coût moyen de l'épisode 300000 : 6.810618655947293
+Moyenne de mouvements pour la tranche 297000 -> 300000 : 26.89
+
+Nombre de succès : 248805 (82.94%)
+Nombre d'échecs : 51196 (17.07%)
+Succès pour la tranche 295000 -> 300000 : 4960 (99.2 %)
+Echecs pour la tranche 295000 -> 300000 : 40 (40 %)
+Temps écoulé depuis le début : 0h 38mn 53s
+
+episode : 305000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.347252206031044
+max weights_final : 14.47586582732138
+max old_output_hidden : 0.9936672882573283
+Coût moyen de l'épisode 305000 : 1.224499048568169
+Moyenne de mouvements pour la tranche 301950 -> 305000 : 28.01
+
+Nombre de succès : 253752 (83.2%)
+Nombre d'échecs : 51249 (16.8%)
+Succès pour la tranche 300000 -> 305000 : 4947 (98.94 %)
+Echecs pour la tranche 300000 -> 305000 : 53 (53 %)
+Temps écoulé depuis le début : 0h 39mn 7s
+
+episode : 310000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.361569735112411
+max weights_final : 14.489811703857745
+max old_output_hidden : 0.9999591997159037
+Coût moyen de l'épisode 310000 : 1.0200240784760455
+Moyenne de mouvements pour la tranche 306900 -> 310000 : 26.90
+
+Nombre de succès : 258710 (83.45%)
+Nombre d'échecs : 51291 (16.55%)
+Succès pour la tranche 305000 -> 310000 : 4958 (99.16 %)
+Echecs pour la tranche 305000 -> 310000 : 42 (42 %)
+Temps écoulé depuis le début : 0h 39mn 20s
+
+episode : 315000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.352214250012063
+max weights_final : 14.505968625389745
+max old_output_hidden : 0.9992224709262093
+Coût moyen de l'épisode 315000 : 1.241797015577365
+Moyenne de mouvements pour la tranche 311850 -> 315000 : 25.78
+
+Nombre de succès : 263673 (83.71%)
+Nombre d'échecs : 51328 (16.29%)
+Succès pour la tranche 310000 -> 315000 : 4963 (99.26 %)
+Echecs pour la tranche 310000 -> 315000 : 37 (37 %)
+Temps écoulé depuis le début : 0h 39mn 34s
+
+episode : 320000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.286852056295302
+max weights_final : 14.520160186935813
+max old_output_hidden : 0.9973538055998479
+Coût moyen de l'épisode 320000 : 0.16665197912748833
+Moyenne de mouvements pour la tranche 316800 -> 320000 : 26.17
+
+Nombre de succès : 268622 (83.94%)
+Nombre d'échecs : 51379 (16.06%)
+Succès pour la tranche 315000 -> 320000 : 4949 (98.98 %)
+Echecs pour la tranche 315000 -> 320000 : 51 (51 %)
+Temps écoulé depuis le début : 0h 39mn 47s
+
+episode : 325000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.284058137745054
+max weights_final : 14.530495262045875
+max old_output_hidden : 0.9991802320451434
+Coût moyen de l'épisode 325000 : 4.941367459007667
+Moyenne de mouvements pour la tranche 321750 -> 325000 : 25.23
+
+Nombre de succès : 273578 (84.18%)
+Nombre d'échecs : 51423 (15.82%)
+Succès pour la tranche 320000 -> 325000 : 4956 (99.12 %)
+Echecs pour la tranche 320000 -> 325000 : 44 (44 %)
+Temps écoulé depuis le début : 0h 40mn 1s
+
+episode : 330000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.266052758195976
+max weights_final : 14.525625606510598
+max old_output_hidden : 0.9972546724119056
+Coût moyen de l'épisode 330000 : 0.2597343093180592
+Moyenne de mouvements pour la tranche 326700 -> 330000 : 24.56
+
+Nombre de succès : 278542 (84.41%)
+Nombre d'échecs : 51459 (15.59%)
+Succès pour la tranche 325000 -> 330000 : 4964 (99.28 %)
+Echecs pour la tranche 325000 -> 330000 : 36 (36 %)
+Temps écoulé depuis le début : 0h 40mn 14s
+
+episode : 335000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.231305241412201
+max weights_final : 14.53167533426637
+max old_output_hidden : 0.9998812221834456
+Coût moyen de l'épisode 335000 : 0.10549677723155589
+Moyenne de mouvements pour la tranche 331650 -> 335000 : 23.90
+
+Nombre de succès : 283504 (84.63%)
+Nombre d'échecs : 51497 (15.37%)
+Succès pour la tranche 330000 -> 335000 : 4962 (99.24 %)
+Echecs pour la tranche 330000 -> 335000 : 38 (38 %)
+Temps écoulé depuis le début : 0h 40mn 27s
+
+episode : 340000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.228454701642072
+max weights_final : 14.5320661523294
+max old_output_hidden : 0.9981355342656749
+Coût moyen de l'épisode 340000 : 8.837411425212306
+Moyenne de mouvements pour la tranche 336600 -> 340000 : 24.40
+
+Nombre de succès : 288467 (84.84%)
+Nombre d'échecs : 51534 (15.16%)
+Succès pour la tranche 335000 -> 340000 : 4963 (99.26 %)
+Echecs pour la tranche 335000 -> 340000 : 37 (37 %)
+Temps écoulé depuis le début : 0h 40mn 41s
+
+episode : 345000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.206369047576299
+max weights_final : 14.527043537165307
+max old_output_hidden : 0.9788782896293983
+Coût moyen de l'épisode 345000 : 4.160826270044077
+Moyenne de mouvements pour la tranche 341550 -> 345000 : 24.10
+
+Nombre de succès : 293425 (85.05%)
+Nombre d'échecs : 51576 (14.95%)
+Succès pour la tranche 340000 -> 345000 : 4958 (99.16 %)
+Echecs pour la tranche 340000 -> 345000 : 42 (42 %)
+Temps écoulé depuis le début : 0h 40mn 54s
+
+episode : 350000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.2021154327746
+max weights_final : 14.534431146464406
+max old_output_hidden : 0.9999953340127375
+Coût moyen de l'épisode 350000 : 0.8307945550679221
+Moyenne de mouvements pour la tranche 346500 -> 350000 : 23.18
+
+Nombre de succès : 298391 (85.25%)
+Nombre d'échecs : 51610 (14.75%)
+Succès pour la tranche 345000 -> 350000 : 4966 (99.32 %)
+Echecs pour la tranche 345000 -> 350000 : 34 (34 %)
+Temps écoulé depuis le début : 0h 41mn 8s
+
+episode : 355000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.181150849697596
+max weights_final : 14.532743193958206
+max old_output_hidden : 0.9942214125616796
+Coût moyen de l'épisode 355000 : 1.538581156294354
+Moyenne de mouvements pour la tranche 351450 -> 355000 : 22.33
+
+Nombre de succès : 303360 (85.45%)
+Nombre d'échecs : 51641 (14.55%)
+Succès pour la tranche 350000 -> 355000 : 4969 (99.38 %)
+Echecs pour la tranche 350000 -> 355000 : 31 (31 %)
+Temps écoulé depuis le début : 0h 41mn 21s
+
+episode : 360000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.189698699826417
+max weights_final : 14.537599668633014
+max old_output_hidden : 0.9998466510906999
+Coût moyen de l'épisode 360000 : 6.888429953878094
+Moyenne de mouvements pour la tranche 356400 -> 360000 : 22.18
+
+Nombre de succès : 308325 (85.65%)
+Nombre d'échecs : 51676 (14.35%)
+Succès pour la tranche 355000 -> 360000 : 4965 (99.3 %)
+Echecs pour la tranche 355000 -> 360000 : 35 (35 %)
+Temps écoulé depuis le début : 0h 41mn 34s
+
+episode : 365000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.191944142454494
+max weights_final : 14.545015824911369
+max old_output_hidden : 0.988027727958842
+Coût moyen de l'épisode 365000 : 0.4726333239831366
+Moyenne de mouvements pour la tranche 361350 -> 365000 : 21.83
+
+Nombre de succès : 313289 (85.83%)
+Nombre d'échecs : 51712 (14.17%)
+Succès pour la tranche 360000 -> 365000 : 4964 (99.28 %)
+Echecs pour la tranche 360000 -> 365000 : 36 (36 %)
+Temps écoulé depuis le début : 0h 41mn 47s
+
+episode : 370000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.176966963997994
+max weights_final : 14.557912011560111
+max old_output_hidden : 0.9999606132110984
+Coût moyen de l'épisode 370000 : 0.014248758980481568
+Moyenne de mouvements pour la tranche 366300 -> 370000 : 21.62
+
+Nombre de succès : 318256 (86.02%)
+Nombre d'échecs : 51745 (13.99%)
+Succès pour la tranche 365000 -> 370000 : 4967 (99.34 %)
+Echecs pour la tranche 365000 -> 370000 : 33 (33 %)
+Temps écoulé depuis le début : 0h 42mn 0s
+
+episode : 375000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.180681732628448
+max weights_final : 14.550563857919615
+max old_output_hidden : 0.9497756588353581
+Coût moyen de l'épisode 375000 : 6.186430779050079
+Moyenne de mouvements pour la tranche 371250 -> 375000 : 21.14
+
+Nombre de succès : 323226 (86.19%)
+Nombre d'échecs : 51775 (13.81%)
+Succès pour la tranche 370000 -> 375000 : 4970 (99.4 %)
+Echecs pour la tranche 370000 -> 375000 : 30 (30 %)
+Temps écoulé depuis le début : 0h 42mn 13s
+
+episode : 380000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.141349995754315
+max weights_final : 14.542119428051523
+max old_output_hidden : 0.9962485930673054
+Coût moyen de l'épisode 380000 : 0.9511205873184954
+Moyenne de mouvements pour la tranche 376200 -> 380000 : 21.32
+
+Nombre de succès : 328193 (86.37%)
+Nombre d'échecs : 51808 (13.63%)
+Succès pour la tranche 375000 -> 380000 : 4967 (99.34 %)
+Echecs pour la tranche 375000 -> 380000 : 33 (33 %)
+Temps écoulé depuis le début : 0h 42mn 27s
+
+episode : 385000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.11620421538171
+max weights_final : 14.53254201952816
+max old_output_hidden : 0.9996772684344566
+Coût moyen de l'épisode 385000 : 5.715922929600164
+Moyenne de mouvements pour la tranche 381150 -> 385000 : 21.92
+
+Nombre de succès : 333148 (86.53%)
+Nombre d'échecs : 51853 (13.47%)
+Succès pour la tranche 380000 -> 385000 : 4955 (99.1 %)
+Echecs pour la tranche 380000 -> 385000 : 45 (45 %)
+Temps écoulé depuis le début : 0h 42mn 41s
+
+episode : 390000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.094880648958933
+max weights_final : 14.534800208493081
+max old_output_hidden : 0.9927964857514907
+Coût moyen de l'épisode 390000 : 0.2403404890964903
+Moyenne de mouvements pour la tranche 386100 -> 390000 : 20.39
+
+Nombre de succès : 338122 (86.7%)
+Nombre d'échecs : 51879 (13.3%)
+Succès pour la tranche 385000 -> 390000 : 4974 (99.48 %)
+Echecs pour la tranche 385000 -> 390000 : 26 (26 %)
+Temps écoulé depuis le début : 0h 42mn 54s
+
+episode : 395000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.095809885600671
+max weights_final : 14.54306711579595
+max old_output_hidden : 0.9840771905267719
+Coût moyen de l'épisode 395000 : 1.9996417045954669
+Moyenne de mouvements pour la tranche 391050 -> 395000 : 19.77
+
+Nombre de succès : 343099 (86.86%)
+Nombre d'échecs : 51902 (13.14%)
+Succès pour la tranche 390000 -> 395000 : 4977 (99.54 %)
+Echecs pour la tranche 390000 -> 395000 : 23 (23 %)
+Temps écoulé depuis le début : 0h 43mn 7s
+
+episode : 400000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.089515996580973
+max weights_final : 14.538650636839497
+max old_output_hidden : 0.9999359471852869
+Coût moyen de l'épisode 400000 : 3.478938591054691
+Moyenne de mouvements pour la tranche 396000 -> 400000 : 19.88
+
+Nombre de succès : 348069 (87.02%)
+Nombre d'échecs : 51932 (12.98%)
+Succès pour la tranche 395000 -> 400000 : 4970 (99.4 %)
+Echecs pour la tranche 395000 -> 400000 : 30 (30 %)
+Temps écoulé depuis le début : 0h 43mn 20s
+
+episode : 405000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.093998583163646
+max weights_final : 14.541822632586479
+max old_output_hidden : 0.9978181762559465
+Coût moyen de l'épisode 405000 : 0.14535618799531194
+Moyenne de mouvements pour la tranche 400950 -> 405000 : 19.92
+
+Nombre de succès : 353031 (87.17%)
+Nombre d'échecs : 51970 (12.83%)
+Succès pour la tranche 400000 -> 405000 : 4962 (99.24 %)
+Echecs pour la tranche 400000 -> 405000 : 38 (38 %)
+Temps écoulé depuis le début : 0h 43mn 34s
+
+episode : 410000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.091310117251606
+max weights_final : 14.54077994195261
+max old_output_hidden : 0.8746663636187166
+Coût moyen de l'épisode 410000 : 0.764643707898081
+Moyenne de mouvements pour la tranche 405900 -> 410000 : 18.96
+
+Nombre de succès : 358007 (87.32%)
+Nombre d'échecs : 51994 (12.68%)
+Succès pour la tranche 405000 -> 410000 : 4976 (99.52 %)
+Echecs pour la tranche 405000 -> 410000 : 24 (24 %)
+Temps écoulé depuis le début : 0h 43mn 47s
+
+episode : 415000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.072269794728363
+max weights_final : 14.539789402924226
+max old_output_hidden : 0.9998981796247739
+Coût moyen de l'épisode 415000 : 3.797460139032255
+Moyenne de mouvements pour la tranche 410850 -> 415000 : 18.77
+
+Nombre de succès : 362980 (87.47%)
+Nombre d'échecs : 52021 (12.54%)
+Succès pour la tranche 410000 -> 415000 : 4973 (99.46 %)
+Echecs pour la tranche 410000 -> 415000 : 27 (27 %)
+Temps écoulé depuis le début : 0h 43mn 59s
+
+episode : 420000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.070059935650379
+max weights_final : 14.529906370975532
+max old_output_hidden : 0.9989856248349424
+Coût moyen de l'épisode 420000 : 2.730170355368038
+Moyenne de mouvements pour la tranche 415800 -> 420000 : 18.55
+
+Nombre de succès : 367955 (87.61%)
+Nombre d'échecs : 52046 (12.39%)
+Succès pour la tranche 415000 -> 420000 : 4975 (99.5 %)
+Echecs pour la tranche 415000 -> 420000 : 25 (25 %)
+Temps écoulé depuis le début : 0h 44mn 12s
+
+episode : 425000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.041942601826168
+max weights_final : 14.52573851994891
+max old_output_hidden : 0.8579386262970211
+Coût moyen de l'épisode 425000 : 5.979948396652947
+Moyenne de mouvements pour la tranche 420750 -> 425000 : 18.54
+
+Nombre de succès : 372927 (87.75%)
+Nombre d'échecs : 52074 (12.25%)
+Succès pour la tranche 420000 -> 425000 : 4972 (99.44 %)
+Echecs pour la tranche 420000 -> 425000 : 28 (28 %)
+Temps écoulé depuis le début : 0h 44mn 24s
+
+episode : 430000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.047852579877473
+max weights_final : 14.530078618220873
+max old_output_hidden : 0.9998180915184782
+Coût moyen de l'épisode 430000 : 2.887291663623924
+Moyenne de mouvements pour la tranche 425700 -> 430000 : 18.29
+
+Nombre de succès : 377903 (87.88%)
+Nombre d'échecs : 52098 (12.12%)
+Succès pour la tranche 425000 -> 430000 : 4976 (99.52 %)
+Echecs pour la tranche 425000 -> 430000 : 24 (24 %)
+Temps écoulé depuis le début : 0h 44mn 38s
+
+episode : 435000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.05034413186653
+max weights_final : 14.52115337442809
+max old_output_hidden : 0.9993922477831123
+Coût moyen de l'épisode 435000 : 3.5569499328876644
+Moyenne de mouvements pour la tranche 430650 -> 435000 : 18.69
+
+Nombre de succès : 382866 (88.02%)
+Nombre d'échecs : 52135 (11.99%)
+Succès pour la tranche 430000 -> 435000 : 4963 (99.26 %)
+Echecs pour la tranche 430000 -> 435000 : 37 (37 %)
+Temps écoulé depuis le début : 0h 44mn 55s
+
+episode : 440000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.034338416079907
+max weights_final : 14.510495135044778
+max old_output_hidden : 0.9687719214718594
+Coût moyen de l'épisode 440000 : 5.612567336441368
+Moyenne de mouvements pour la tranche 435600 -> 440000 : 17.91
+
+Nombre de succès : 387837 (88.14%)
+Nombre d'échecs : 52164 (11.86%)
+Succès pour la tranche 435000 -> 440000 : 4971 (99.42 %)
+Echecs pour la tranche 435000 -> 440000 : 29 (29 %)
+Temps écoulé depuis le début : 0h 45mn 10s
+
+episode : 445000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.042345048078403
+max weights_final : 14.507166401758651
+max old_output_hidden : 0.9999285347386121
+Coût moyen de l'épisode 445000 : 0.22063643123766502
+Moyenne de mouvements pour la tranche 440550 -> 445000 : 17.40
+
+Nombre de succès : 392811 (88.27%)
+Nombre d'échecs : 52190 (11.73%)
+Succès pour la tranche 440000 -> 445000 : 4974 (99.48 %)
+Echecs pour la tranche 440000 -> 445000 : 26 (26 %)
+Temps écoulé depuis le début : 0h 45mn 25s
+
+episode : 450000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.016405596915439
+max weights_final : 14.501138389332445
+max old_output_hidden : 0.9999822675746641
+Coût moyen de l'épisode 450000 : 0.5588290017182783
+Moyenne de mouvements pour la tranche 445500 -> 450000 : 17.12
+
+Nombre de succès : 397792 (88.4%)
+Nombre d'échecs : 52209 (11.6%)
+Succès pour la tranche 445000 -> 450000 : 4981 (99.62 %)
+Echecs pour la tranche 445000 -> 450000 : 19 (19 %)
+Temps écoulé depuis le début : 0h 45mn 39s
+
+episode : 455000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.979459755463275
+max weights_final : 14.506344764007169
+max old_output_hidden : 0.9685586100706324
+Coût moyen de l'épisode 455000 : 1.1267232543105457
+Moyenne de mouvements pour la tranche 450450 -> 455000 : 16.94
+
+Nombre de succès : 402766 (88.52%)
+Nombre d'échecs : 52235 (11.48%)
+Succès pour la tranche 450000 -> 455000 : 4974 (99.48 %)
+Echecs pour la tranche 450000 -> 455000 : 26 (26 %)
+Temps écoulé depuis le début : 0h 45mn 54s
+
+Modèle le plus optimal obtenu à l'épisode 458279 avec un moyenne de 11.09 mouvements
+
+episode : 460000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.004306694737254
+max weights_final : 14.516209036395601
+max old_output_hidden : 0.9999561517559927
+Coût moyen de l'épisode 460000 : 0.4220506409854182
+Moyenne de mouvements pour la tranche 455400 -> 460000 : 16.89
+
+Nombre de succès : 407740 (88.64%)
+Nombre d'échecs : 52261 (11.36%)
+Succès pour la tranche 455000 -> 460000 : 4974 (99.48 %)
+Echecs pour la tranche 455000 -> 460000 : 26 (26 %)
+Temps écoulé depuis le début : 0h 46mn 11s
+
+episode : 465000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.987423551124898
+max weights_final : 14.520636252688341
+max old_output_hidden : 0.9888199797279393
+Coût moyen de l'épisode 465000 : 2.277322778734322
+Moyenne de mouvements pour la tranche 460350 -> 465000 : 17.43
+
+Nombre de succès : 412705 (88.75%)
+Nombre d'échecs : 52296 (11.25%)
+Succès pour la tranche 460000 -> 465000 : 4965 (99.3 %)
+Echecs pour la tranche 460000 -> 465000 : 35 (35 %)
+Temps écoulé depuis le début : 0h 46mn 26s
+
+episode : 470000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.994992576122904
+max weights_final : 14.535186507491359
+max old_output_hidden : 0.9999937033449549
+Coût moyen de l'épisode 470000 : 3.5852384167360167
+Moyenne de mouvements pour la tranche 465300 -> 470000 : 16.39
+
+Nombre de succès : 417683 (88.87%)
+Nombre d'échecs : 52318 (11.13%)
+Succès pour la tranche 465000 -> 470000 : 4978 (99.56 %)
+Echecs pour la tranche 465000 -> 470000 : 22 (22 %)
+Temps écoulé depuis le début : 0h 46mn 41s
+
+episode : 475000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 8.000172100592348
+max weights_final : 14.53393667229019
+max old_output_hidden : 0.9998554032164103
+Coût moyen de l'épisode 475000 : 0.6321921571290579
+Moyenne de mouvements pour la tranche 470250 -> 475000 : 16.43
+
+Nombre de succès : 422655 (88.98%)
+Nombre d'échecs : 52346 (11.02%)
+Succès pour la tranche 470000 -> 475000 : 4972 (99.44 %)
+Echecs pour la tranche 470000 -> 475000 : 28 (28 %)
+Temps écoulé depuis le début : 0h 46mn 55s
+
+episode : 480000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.957646005086382
+max weights_final : 14.528894608782304
+max old_output_hidden : 0.9999935499093838
+Coût moyen de l'épisode 480000 : 6.140054669808995
+Moyenne de mouvements pour la tranche 475200 -> 480000 : 16.17
+
+Nombre de succès : 427632 (89.09%)
+Nombre d'échecs : 52369 (10.91%)
+Succès pour la tranche 475000 -> 480000 : 4977 (99.54 %)
+Echecs pour la tranche 475000 -> 480000 : 23 (23 %)
+Temps écoulé depuis le début : 0h 47mn 8s
+
+episode : 485000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.958398007648092
+max weights_final : 14.533575457855282
+max old_output_hidden : 0.9769223664396937
+Coût moyen de l'épisode 485000 : 0.4864105600428581
+Moyenne de mouvements pour la tranche 480150 -> 485000 : 15.71
+
+Nombre de succès : 432610 (89.2%)
+Nombre d'échecs : 52391 (10.8%)
+Succès pour la tranche 480000 -> 485000 : 4978 (99.56 %)
+Echecs pour la tranche 480000 -> 485000 : 22 (22 %)
+Temps écoulé depuis le début : 0h 47mn 22s
+
+episode : 490000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.958363062538747
+max weights_final : 14.539056743110216
+max old_output_hidden : 0.9995247647322016
+Coût moyen de l'épisode 490000 : 1.5588674813389944
+Moyenne de mouvements pour la tranche 485100 -> 490000 : 15.53
+
+Nombre de succès : 437595 (89.31%)
+Nombre d'échecs : 52406 (10.7%)
+Succès pour la tranche 485000 -> 490000 : 4985 (99.7 %)
+Echecs pour la tranche 485000 -> 490000 : 15 (15 %)
+Temps écoulé depuis le début : 0h 47mn 37s
+
+episode : 495000 - epsilon : 0.15 - learning rate : 1e-05max weights_hidden : 7.947365654452185
+max weights_final : 14.540438512565355
+max old_output_hidden : 0.9998371730050539
+Coût moyen de l'épisode 495000 : 0.8675246134596001
+Moyenne de mouvements pour la tranche 490050 -> 495000 : 16.24
+
+Nombre de succès : 442565 (89.41%)
+Nombre d'échecs : 52436 (10.59%)
+Succès pour la tranche 490000 -> 495000 : 4970 (99.4 %)
+Echecs pour la tranche 490000 -> 495000 : 30 (30 %)
+Temps écoulé depuis le début : 0h 47mn 51s
+
+Temps d'exécution : 0h 48min 4
+Meilleur score de l'entrainement : 58
+Nombre total de mouvements : 21597597 | Moyenne : 43.195194
+
+Reward : -8.2 : 6661061
+Reward : 5.8 : 7491699
+Reward : -4.2 : 4069767
+Reward : -10.2 : 2927531
+Reward : 25 : 447539

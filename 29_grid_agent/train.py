@@ -2,11 +2,12 @@ import numpy as np
 import random
 from datetime import datetime
 import os
+import time
+import matplotlib.pyplot as plt
 
 run_start = datetime.now()
-
+date_time = run_start.strftime("%d-%m-%Y_%Hh%Mm%Ss")
 start = datetime.now()
-
 
 def create_world(agent_start_pos, goal_pos):
     world = np.array([
@@ -21,10 +22,9 @@ def create_world(agent_start_pos, goal_pos):
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
     ], dtype=int)
-
+    
     world[agent_start_pos] = 2
     world[goal_pos] = 3
-
     return world
 
 def display(world):
@@ -64,15 +64,17 @@ def move_agent(agent_pos, action, world):
 def is_goal_reached(agent_pos, goal_pos):
     return agent_pos == goal_pos
 
-def get_reward(old_agent_position, agent_pos, goal_pos):
+def get_reward(old_agent_position, agent_pos, goal_pos, two_moves_ago):
     if agent_pos == goal_pos:
-        return 20
+        return 25
     elif old_agent_position == agent_pos:
-        return -8
+        return -8.2
+    elif two_moves_ago == agent_pos:
+        return - 10.2
     elif is_nearer(old_agent_position, agent_pos, goal_pos):
-        return 5
+        return 5.8
     else:
-        return -4
+        return -4.2
 
 def is_nearer(old_pos, new_pos, goal_pos):
     old_vector = normalize(old_pos) - normalize(goal_pos)
@@ -100,11 +102,27 @@ def get_agent_environment(agent_pos, world):
     right = wall_or_outsite(row, col + 1, world)
     return (up, down, left, right) 
 
-def create_network_input(agent_pos, goal_pos, agent_enviro):
+def create_network_input(agent_pos, goal_pos, agent_enviro, entire_grid, two_moves_ago):
     agent_row, agent_col = agent_pos
     goal_row, goal_col = goal_pos
     up, down, left, right = agent_enviro
-    return np.array([agent_row/9, agent_col/9, goal_row/9, goal_col/9, up, down, left, right]).reshape(-1, 8)
+    two_moves_ago_row, two_moves_ago_col = two_moves_ago
+    locale_information = np.array([
+        agent_row/9,
+        agent_col/9,
+        goal_row/9,
+        goal_col/9,
+        up,
+        down,
+        left,
+        right,
+        two_moves_ago_row /9,
+        two_moves_ago_col /9
+    ])
+
+    concatenated = np.concatenate([locale_information, entire_grid])
+
+    return concatenated.reshape(1, 110)
 
 def get_free_positions(world):
     free_positions = []
@@ -126,7 +144,6 @@ def calculate_time(secs):
     seconds = secs % 60
     return f"{hours}h {minutes}mn {seconds}s"
 
-
 agent_row_start = 0
 agent_col_start = 0
 
@@ -135,61 +152,97 @@ start_position = (agent_row_start, agent_col_start)
 moves = ["haut", "bas", "droite", "gauche"]
 
 gamma = 0.8
-learning_rate = 0.0007
+learning_rate = 0.00001
 
 successes = 0
 fails = 0
-episodes = 200000
+episodes = 500000
 max_moves = 200
-neurons_hidden = 8
+neurons_hidden = 16
 
-file = open(f"sortie_agent_train_{neurons_hidden}_neurons_{episodes}_episodes.txt", "w")
+file = open(f"./29_sortie_entrainement_{date_time}.txt", "w")
 
 successes_by_goal_position = {}
 fails_by_goal_position = {}
 
 total_moves = 0
-epsilon = 1
+moves_by_batch = 0
 np.random.seed(42)
 random.seed(42)
 successes = 0
 fails = 0
-epsilon_min = 0.05
+epsilon = 1
+epsilon_min = 0.15
 epsilon_decay = (epsilon - epsilon_min) / (episodes * 0.5)
+evaluation_interval = 10
+
+path_best_model_file = "./29_/best_new_model.npz"
 
 
-file.write(f"train.py | entrainement à {neurons_hidden} neurones - {episodes} épisodes\n\n")
-print(f"train.py | entrainement à {neurons_hidden} neurones - {episodes} épisodes\n")
+file.write(f"train.py | entrainement du {date_time}\n")
+print(f"train.py | entrainement du {date_time}\n")
 
-if os.path.exists(f"./29_/parameters_{neurons_hidden}_neurons_{episodes}_episodes.npz"):
+if os.path.exists(path_best_model_file):
     print("Chargement des paramètres...")
     file.write("Chargement des paramètres...\n\n")
-    data = np.load(f"./29_/parameters_{neurons_hidden}_neurones_{episodes}_episodes.npz")
+    data = np.load(path_best_model_file)
     weights_hidden = data["weights_hidden"]
     bias_hidden = data["bias_hidden"]
     weights_hidden2 = data["weights_hidden2"]
     bias_hidden2 = data["bias_hidden2"]
     weights_final = data["weights_final"]
     bias_final = data["bias_final"]
+    last_best_score = data["last_best_score"]
+    min_mean_test_moves = data["mean_min_test_moves"]
+
+    print(f"\nScore à battre : {last_best_score} !\n")
+    time.sleep(2)
 else:
     print("Inititialisation aléatoire des paramètres...")
     file.write("Inititialisation aléatoire des paramètres...\n\n")
-    weights_hidden = np.random.rand(8, neurons_hidden) - 0.5
+    time.sleep(2)
+    weights_hidden = np.random.rand(110, neurons_hidden) - 0.5
     bias_hidden = np.random.rand(1, neurons_hidden) - 0.5
 
-    weights_hidden2 = np.random.rand(neurons_hidden, 4) - 0.5
-    bias_hidden2 = np.random.rand(1, 4)
+    weights_hidden2 = np.random.rand(neurons_hidden, 8) - 0.5
+    bias_hidden2 = np.random.rand(1, 8)
 
-    weights_final = np.random.rand(4, 4) - 0.5
+    weights_final = np.random.rand(8, 4) - 0.5
     bias_final = np.random.rand(1, 4) - 0.5
 
+    last_best_score = 0
+
+    last_min_mean_test_moves = float("inf")
+
+
+
 rewards_distribution = {}
+
+cost_history = []
+episode_history = []
+
+plt.ion()
+
+figure, axis = plt.subplots()
+
+cost_line, = axis.plot([], [])
+
+axis.set_title("Évolution du coût pendant l'entraînement")
+axis.set_xlabel("Épisodes")
+axis.set_ylabel("Coût moyen")
+axis.grid()
+
+cost_for_batch = 0
+
+graph_interval = 100
 
 world = create_world(start_position, start_position)
 free_positions = get_free_positions(world)
 successes_for_batch_episodes = 0
 fails_for_batch_episodes = 0
-
+best_score = last_best_score
+best_train_score = 0
+min_mean_test_moves = last_min_mean_test_moves
 for episode in range(episodes):
     current_position = start_position
     goal_position = random.choice(free_positions)
@@ -197,10 +250,12 @@ for episode in range(episodes):
     nb_moves = 0
     episode_cost = 0
     nb_update = 0
+    previous_position = start_position
     while current_position != goal_position and nb_moves < max_moves:
+        position_tow_moves_ago = previous_position
         old_position = current_position
         old_agent_environment = get_agent_environment(old_position, grid)
-        old_input_network = create_network_input(old_position, goal_position, old_agent_environment)
+        old_input_network = create_network_input(old_position, goal_position, old_agent_environment, grid.flatten(), position_tow_moves_ago)
         random_choice = np.random.random()
         if random_choice < epsilon:
             action = get_random_action(moves)
@@ -214,13 +269,15 @@ for episode in range(episodes):
             action = moves[index_action]
         
         current_position, grid = move_agent(current_position, action, grid)
+        previous_position = old_position
         current_agent_environment = get_agent_environment(current_position, grid)
         nb_moves += 1
-        input_network = create_network_input(current_position, goal_position, current_agent_environment)
-        reward = get_reward(old_position, current_position, goal_position)
+        input_network = create_network_input(current_position, goal_position, current_agent_environment, grid.flatten(), old_position)
+        reward = get_reward(old_position, current_position, goal_position, position_tow_moves_ago)
         rewards = rewards_distribution.get(reward, 0)
         rewards_distribution[reward] = rewards + 1
         total_moves += 1
+        moves_by_batch += 1
 
         current_z_hidden = np.dot(input_network, weights_hidden) + bias_hidden
         current_output_hidden = sigmoid(current_z_hidden)
@@ -264,53 +321,133 @@ for episode in range(episodes):
         percent = (episode + 1) / episodes * 100
         print(f"Episode {episode}/{episodes} ({round(percent, 2)}%). epsilon : {epsilon}", end="\r")
     mean_episode_cost = episode_cost / nb_update
+    cost_for_batch += mean_episode_cost
+
+    if (episode + 1) % graph_interval == 0:
+        mean_batch_cost = cost_for_batch / graph_interval
+
+        episode_history.append(episode + 1)
+        cost_history.append(mean_batch_cost)
+
+        cost_line.set_data(episode_history, cost_history)
+
+        axis.relim()
+        axis.autoscale_view()
+
+        figure.canvas.draw()
+        figure.canvas.flush_events()
+
+        cost_for_batch = 0
+
 
     if current_position == goal_position:
         successes += 1
-        successes_for_batch_episodes
+        successes_for_batch_episodes += 1
     else:
         fails += 1
-        fails_for_batch_episodes
+        fails_for_batch_episodes += 1
 
     if episode % (episodes / 100) == 0 and episode > 1:
         successes_percent = round(successes / episode * 100, 2)
         fails_percent = round(fails / episode * 100, 2)
-        successes_percent_batch = round(successes_for_batch_episodes / (episode / 100) * 100, 2)
-        fails_percent_batch = round(fails_for_batch_episodes / (episode / 100) * 100)
+        successes_percent_batch = round(successes_for_batch_episodes / (episodes / 100) * 100, 2)
+        fails_percent_batch = round(fails_for_batch_episodes / (episodes / 100) * 100, 2)
         time_now = datetime.now()
         time_from_start = time_now - run_start
-        print("\nepisode : ", episode)
-        print(f"Temps d'éxécution du script : {calculate_time(time_from_start.seconds)}")
+        mean_moves_by_batch = moves_by_batch / (episodes / 100)
+        print(f"\nepisode : {episode} - epsilon : {epsilon} - learning rate : {learning_rate}")
         print("max weights_hidden:", np.max(np.abs(weights_hidden)))
         print("max weights_final:", np.max(np.abs(weights_final)))
         print("max old_output_hidden:", np.max(np.abs(old_output_hidden)))
         print(f"Coût moyen de l'épisode {episode} : {mean_episode_cost}")
+        print(f"Moyenne de mouvements pour la tranche {int(episode - (episodes / 100))} -> {episode} : {mean_moves_by_batch:.2f}")
         print(f"Nombre de succès : {successes} ({successes_percent}%)")
         print(f"Nombre d'échecs : {fails} ({fails_percent}%)")
-        print(f"Succès pour la tranche {episode - (episode / 100)} -> {episode} : {successes_for_batch_episodes} ({successes_percent_batch} %)")
-        print(f"Echecs pour la tranche {episode - (episode / 100)} -> {episode} : {fails_for_batch_episodes} ({fails_for_batch_episodes} %)")
+        print(f"Succès pour la tranche {int(episode - (episodes / 100))} -> {episode} : {successes_for_batch_episodes} ({successes_percent_batch} %)")
+        print(f"Echecs pour la tranche {int(episode - (episodes / 100))} -> {episode} : {fails_for_batch_episodes} ({fails_percent_batch} %)")
+        print(f"Temps écoulé depuis le début : {calculate_time(time_from_start.seconds)}\n")
         
 
-        file.write(f"\nEpisode : {episode}\n")
+        file.write(f"\nepisode : {episode} - epsilon : {epsilon} - learning rate : {learning_rate}")
         file.write(f"max weights_hidden : {np.max(np.abs(weights_hidden))}\n")
         file.write(f"max weights_final : {np.max(np.abs(weights_final))}\n")
         file.write(f"max old_output_hidden : {np.max(np.abs(old_output_hidden))}\n")
-        file.write(f"Moyenne de l'épisode {episode} : {mean_episode_cost}\n")
+        file.write(f"Coût moyen de l'épisode {episode} : {mean_episode_cost}\n")
+        file.write(f"Moyenne de mouvements pour la tranche {int(episode - (episode / 100))} -> {episode} : {mean_moves_by_batch:.2f}\n\n")
         file.write(f"Nombre de succès : {successes} ({successes_percent}%)\n")
-        file.write(f"Nombre d'échecs : {fails} ({fails_percent}%)\n\n")
+        file.write(f"Nombre d'échecs : {fails} ({fails_percent}%)\n")
+        file.write(f"Succès pour la tranche {int(episode - (episodes / 100))} -> {episode} : {successes_for_batch_episodes} ({successes_percent_batch} %)\n")
+        file.write(f"Echecs pour la tranche {int(episode - (episodes / 100))} -> {episode} : {fails_for_batch_episodes} ({fails_for_batch_episodes} %)\n")
+        file.write(f"Temps écoulé depuis le début : {calculate_time(time_from_start.seconds)}\n")
+
+        fails_for_batch_episodes = 0
+        successes_for_batch_episodes = 0
+        moves_by_batch = 0
     epsilon = max(epsilon_min, epsilon - epsilon_decay)
 
-    
+    if (episode + 1) % evaluation_interval == 0:
+        score = 0
+        total_test_moves = 0
+        for test_goal_position in free_positions:
+            max_test_moves = 100
+            test_grid = create_world(start_position, test_goal_position)
+            test_current_position = start_position
+            test_moves = 0
+            test_previous_position = start_position
+            while test_current_position != test_goal_position and test_moves < max_test_moves:
+                test_position_two_moves_ago = test_previous_position
+                test_old_position = test_current_position
+                test_agent_enviro = get_agent_environment(test_current_position, test_grid)
+                test_input_network = create_network_input(test_current_position, test_goal_position, test_agent_enviro, test_grid.flatten(), test_position_two_moves_ago)
+                test_output_hidden = sigmoid(np.dot(test_input_network, weights_hidden) + bias_hidden)
+                test_output_hidden2 = sigmoid(np.dot(test_output_hidden, weights_hidden2) + bias_hidden2)
+                test_q_values= np.dot(test_output_hidden2, weights_final) + bias_final
+                action_index = np.argmax(test_q_values)
+                action = moves[action_index]
+                test_current_position, test_grid = move_agent(test_current_position, action, test_grid)
+                test_previous_position = test_old_position
+                test_moves += 1
+            if test_current_position == test_goal_position:
+                score +=1
+                total_test_moves += test_moves
+        
+        mean_test_moves = total_test_moves / len(free_positions)
 
-np.savez(
-    f"./29_/parameters_{neurons_hidden}_neurons_{episodes}_episodes.npz",
-    weights_hidden=weights_hidden,
-    bias_hidden=bias_hidden,
-    weights_hidden2=weights_hidden2,
-    bias_hidden2=bias_hidden2,
-    weights_final=weights_final,
-    bias_final=bias_final
-)
+        if score > best_score:
+            best_score = score
+            print(f"\nNouveau meilleur modèle : {best_score}/{len(free_positions)} obtenu à l'épisode {episode}\n")
+            file.write(f"\nNouveau meilleur modèle : {best_score}/{len(free_positions)} obtenu à l'épisode {episode}\n\n")
+            np.savez(
+                f"./29_/best_score_model.npz",
+                weights_hidden=weights_hidden,
+                bias_hidden=bias_hidden,
+                weights_hidden2=weights_hidden2,
+                bias_hidden2=bias_hidden2,
+                weights_final=weights_final,
+                bias_final=bias_final,
+                last_best_score=best_score
+            )
+        if score > best_train_score:
+            best_train_score = score
+
+        if score == len(free_positions) and mean_test_moves < min_mean_test_moves:
+            min_mean_test_moves = mean_test_moves
+            file.write(f"\nModèle le plus optimal obtenu à l'épisode {episode} avec un moyenne de {min_mean_test_moves:.2f} mouvements\n")
+            print(f"\nModèle le plus optimal obtenu à l'épisode {episode} avec un moyenne de {min_mean_test_moves:.2f} mouvements\n")
+            np.savez(
+                f"./29_/best_optimal_model.npz",
+                weights_hidden=weights_hidden,
+                bias_hidden=bias_hidden,
+                weights_hidden2=weights_hidden2,
+                bias_hidden2=bias_hidden2,
+                weights_final=weights_final,
+                bias_final=bias_final,
+                last_best_score=score,
+                min_mean_test_moves=min_mean_test_moves
+            )
+
+            
+        
 
 end = datetime.now()
 exec_time = end - start
@@ -320,10 +457,16 @@ minutes = (exec_time.seconds % 3600) // 60
 seconds = exec_time.seconds % 60
 print()
 print(f"Temps d'exécution : {hours}h {minutes}min {seconds}s")
-file.write(f"\nTemps d'exécution : {hours}h {minutes}min {seconds}\n\n")
+print(f"Meilleur score de l'entrainement : {best_train_score}")
+print(f"Nombre total de mouvements : {total_moves} | Moyenne : {total_moves / episodes}")
+file.write(f"\nTemps d'exécution : {hours}h {minutes}min {seconds}\n")
+file.write(f"Meilleur score de l'entrainement : {best_train_score}\n")
+file.write(f"Nombre total de mouvements : {total_moves} | Moyenne : {total_moves / episodes}\n\n")
 for key, value in rewards_distribution.items():
-    print(f"Reward : {key} : {value}\n")
-    file.write(f"Reward : {key} : {value}")
+    print(f"Reward : {key} : {value}")
+    file.write(f"Reward : {key} : {value}\n")
 
 print(total_moves)
+plt.ioff()
+plt.show()
 file.close()

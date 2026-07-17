@@ -89,7 +89,7 @@ Objectif final : créer une IA capable de jouer et terminer Sonic 2 de manière 
 
 - [x] Projet 26 — Agent dans une grille
 - [x] Projet 27 — Agent avec position de l’objectif en entrée
-- [ ] Projet 28 — Objectif mobile simple
+- [x] Projet 28 — Objectif mobile simple
 - [ ] Projet 29 — Jeu avec inertie simple
 - [ ] Projet 30 — Obstacle et navigation
 - [ ] Projet 31 — Terminer un niveau simple
